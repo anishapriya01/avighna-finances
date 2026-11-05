@@ -1,18 +1,40 @@
 <!doctype html>
 <html lang="en" class="scroll-smooth">
   <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><defs><linearGradient id='g' x1='0%' y1='100%' x2='100%' y2='0%'><stop offset='0%' stop-color='%23059669'/><stop offset='100%' stop-color='%232563EB'/></linearGradient></defs><rect width='100' height='100' rx='24' fill='%23FFFFFF' stroke='%23E2E8F0' stroke-width='4'/><path d='M25 72 L45 34 L58 52 L75 24' stroke='url(%23g)' stroke-width='9' stroke-linecap='round' stroke-linejoin='round' fill='none'/><circle cx='75' cy='24' r='6' fill='%23F59E0B'/></svg>" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Avighna Financial Services | Wealth, Loans & Advisory Pune</title>
-    <meta name="description" content="Avighna Financial Services - Premier fiduciary financial advisory firm in Pune specializing in Home & Business Loans, Mutual Funds, SIPs, Insurance, and Property Advisory." />
-    <!-- Google Fonts -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#ffffff">
+    <title>Avighna Financial Services | Wealth, Loans &amp; Advisory Pune</title>
+    <meta name="description" content="Avighna Financial Services offers fiduciary financial advisory in Pune for loans, mutual funds, SIPs, insurance, and property.">
+    <link rel="icon" type="image/svg+xml" href="./public/favicon.svg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: { sans: ['Plus Jakarta Sans', 'Inter', 'system-ui', 'sans-serif'] },
+            colors: { gold: { 300: '#FCD34D', 400: '#FBBF24', 500: '#F59E0B', 600: '#D97706' } },
+            animation: {
+              'fade-in': 'fadeIn .25s ease-out',
+              'bounce-short': 'bounceShort 2.5s ease-in-out infinite',
+              'spin-slow': 'spin 4s linear infinite'
+            },
+            keyframes: {
+              fadeIn: { from: { opacity: '0' }, to: { opacity: '1' } },
+              bounceShort: { '0%, 100%': { transform: 'translateY(0)' }, '50%': { transform: 'translateY(-5px)' } }
+            }
+          }
+        }
+      };
+    </script>
+    <link rel="stylesheet" href="./styles.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="./app.js" defer></script>
   </head>
-  <body class="bg-slate-50 text-slate-800 antialiased selection:bg-emerald-500 selection:text-white min-h-screen">
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
+  <body class="min-h-screen bg-slate-50 font-sans text-slate-800 antialiased selection:bg-emerald-500 selection:text-white">
+    <div id="app"></div>
   </body>
 </html>

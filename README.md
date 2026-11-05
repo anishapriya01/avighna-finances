@@ -1,16 +1,15 @@
-# React + Vite
+# Avighna Financial Services
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+A standalone, multi-page-style financial advisory website built with semantic HTML, Tailwind CSS via CDN, and plain JavaScript. No build step, package manager, framework, or npm dependency is required.
 
-Currently, two official plugins are available:
+## Run locally
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Open `index.html` directly in a modern browser, or serve this folder with any static HTTP server. The Tailwind and Lucide assets and Google Fonts are loaded from their CDNs, so those features require an internet connection.
 
-## React Compiler
+## Pages and interactions
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the Oxlint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+- Home, Services, Calculators, Why Avighna, and Contact & Advisory pages use hash-based client-side routing.
+- Four calculators update projections and allocation bars as their sliders move.
+- Services include category switching and expandable document checklists; Contact includes categorized FAQ accordions.
+- The complimentary financial checkup is a three-step form with client-side validation and confirmation.
+- The client portal includes a sample portfolio view and simulated OTP flow. Forms and OTP are demo interactions and do not send or store information.
