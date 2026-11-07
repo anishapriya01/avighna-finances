@@ -14,7 +14,15 @@
     ['Business Loan', 'Business & MSME Capital', 'Working capital & machinery loans', 'building-2'],
     ['Retirement Planning', 'Retirement & FIRE', 'Inflation-adjusted corpus roadmaps', 'piggy-bank'],
     ['Term Insurance', 'Term Life & Health Cover', 'High-value claim settlement protection', 'shield-check'],
-    ['Property Advisory', 'Property & Commercial', 'Vetted Pune acquisitions & yields', 'calculator']
+    ['Property Advisory', 'Property & Commercial', 'Vetted Pune acquisitions & yields', 'calculator'],
+    ['Personal Loan', 'Personal Loan', 'Flexible funds for personal milestones', 'wallet'],
+    ['Education Loan', 'Education Loan', 'Tuition and living costs for higher studies', 'graduation-cap'],
+    ['Vehicle Loan', 'Car / Vehicle Loan', 'Financing for cars and two-wheelers', 'car-front'],
+    ['Loan Against Securities', 'Loan Against Securities', 'Liquidity while retaining your investments', 'chart-no-axes-combined'],
+    ['Health Insurance', 'Health Insurance', 'Medical cover for you and your family', 'heart-pulse'],
+    ['Vehicle Insurance', 'Vehicle Insurance', 'Protection for your car or two-wheeler', 'shield-check'],
+    ['Property Insurance', 'Property Insurance', 'Cover for your home or business premises', 'building-2'],
+    ['Fixed Deposits', 'Fixed Deposits', 'Planned returns with flexible tenures', 'landmark']
   ];
   const serviceData = [
     {
@@ -106,6 +114,26 @@
       ['Does Avighna charge upfront fees for the Free Financial Checkup?', 'The initial 45-minute Financial Health Checkup and customized Portfolio Blueprint are complimentary. Any applicable charges are disclosed before engagement.'],
       ['Where is your Pune office, and can advisors visit my home or office?', 'Our Baner headquarters is near Balewadi High Street. Doorstep consultations are available across Baner, Aundh, Kothrud, Viman Nagar, Kalyani Nagar, Hinjewadi, and Wakad.']
     ]]
+  ];
+  const serviceCatalog = [
+    { category: 'loans', title: 'Home Loan & Loan Against Property (LAP)', tagline: 'Unlock your dream home or tap into your property’s value.', description: 'Finance the purchase or construction of your home, or unlock existing property equity for major expenses with competitive rates, flexible repayment options, and support through every step.', highlights: ['Low interest rates', 'High LTV ratio', 'Flexible repayment tenures up to 30 years'], icon: 'house', goal: 'Home Loan', cta: 'Apply Now' },
+    { category: 'loans', title: 'Business Loan', tagline: 'Fuel your enterprise growth and working capital.', description: 'Fund expansion, inventory, or equipment with collateral-free and secured credit options designed around SME cash flow, business stage, and repayment capacity, with guidance from application through disbursal.', highlights: ['Minimal documentation', 'Quick approval cycles', 'Flexible collateral options'], icon: 'briefcase-business', goal: 'Business Loan', cta: 'Apply Now' },
+    { category: 'loans', title: 'Personal Loan', tagline: 'Instant funds for your immediate personal milestones.', description: 'Handle medical bills, weddings, travel, or debt consolidation with quick, unsecured financing, a straightforward application, and repayment options shaped around your monthly budget and immediate priorities.', highlights: ['Fast-track digital verification', 'No end-use restrictions', 'Transparent fee structure'], icon: 'wallet', goal: 'Personal Loan', cta: 'Apply Now' },
+    { category: 'loans', title: 'Education Loan', tagline: 'Invest in your global academic journey.', description: 'Plan for higher studies in India or abroad with financing for tuition, living costs, books, and travel, plus repayment plans that account for your course and career timeline.', highlights: ['Moratorium period options', 'Competitive student rates', 'Tax benefits under Section 80E'], icon: 'graduation-cap', goal: 'Education Loan', cta: 'Apply Now' },
+    { category: 'loans', title: 'Car / Vehicle Loan', tagline: 'Drive home your ideal car or two-wheeler effortlessly.', description: 'Choose convenient financing for a new or certified pre-owned car or two-wheeler, with competitive rates, flexible EMI options, and funding that can cover up to the full on-road cost.', highlights: ['Up to 100% financing', 'Flexible EMI tenures', 'Fast processing'], icon: 'car-front', goal: 'Vehicle Loan', cta: 'Apply Now' },
+    { category: 'loans', title: 'Loan Against Securities', tagline: 'Instant liquidity without liquidating your investments.', description: 'Access a credit line or overdraft against eligible mutual funds, shares, or bonds, so you can meet near-term needs while keeping your investments and potential market exposure in place.', highlights: ['Retain portfolio ownership', 'Pay interest only on utilized amounts', 'Zero foreclosure charges'], icon: 'chart-no-axes-combined', goal: 'Loan Against Securities', cta: 'Apply Now' },
+    { category: 'insurance', title: 'Life Insurance', tagline: 'Comprehensive financial security for your family’s future.', description: 'Help protect your family’s financial future with term, endowment, and wealth-building policy options, personalized to your priorities and supported by available riders for additional coverage.', highlights: ['High claim settlement ratios', 'Critical illness riders', 'Tax deductions under 80C'], icon: 'heart-handshake', goal: 'Term Insurance', cta: 'Get a Quote' },
+    { category: 'insurance', title: 'Health Insurance', tagline: 'Shield your savings against rising medical costs.', description: 'Cover eligible hospitalization, daycare procedures, and pre- and post-hospitalization expenses with health plans that may include cashless treatment, wellness benefits, and protection against rising medical bills.', highlights: ['Vast cashless hospital network', 'No-claim bonus benefits', 'Quick cashless approvals'], icon: 'heart-pulse', goal: 'Health Insurance', cta: 'Get a Quote' },
+    { category: 'insurance', title: 'Vehicle Insurance', tagline: 'Complete road protection for two-wheelers and four-wheelers.', description: 'Protect your two-wheeler or car against accidental damage, theft, natural events, and third-party liability, with optional add-ons such as zero depreciation and roadside assistance for added peace of mind.', highlights: ['Instant policy renewal', 'Zero depreciation add-ons', '24/7 roadside assistance'], icon: 'shield-check', goal: 'Vehicle Insurance', cta: 'Get a Quote' },
+    { category: 'insurance', title: 'Property Insurance', tagline: 'Protect your home and commercial spaces against unforeseen risks.', description: 'Insure your home or commercial premises against covered events such as fire, burglary, natural catastrophes, and structural damage, with options for building and contents protection.', highlights: ['Structure and contents coverage', 'Rapid damage assessment', 'Comprehensive peril shield'], icon: 'building-2', goal: 'Property Insurance', cta: 'Get a Quote' },
+    { category: 'investments', title: 'Mutual Funds (SIP & Lump Sum)', tagline: 'Disciplined wealth accumulation suited to your financial goals.', description: 'Build a diversified portfolio across equity, debt, and hybrid funds using regular SIPs or lump-sum investments, with fund choices and tracking aligned to your goals, time horizon, and comfort with risk.', highlights: ['Curated expert fund selection', 'Flexible starting amounts', 'Goal-based portfolio tracking'], icon: 'chart-pie', goal: 'Wealth Creation', cta: 'Enquire Now' },
+    { category: 'investments', title: 'Fixed Deposits (FD)', tagline: 'Guaranteed returns with capital preservation.', description: 'Choose fixed deposits from banks and rated institutions for planned returns and capital preservation, with tenure options, regular payout choices, and terms that may include senior citizen benefits.', highlights: ['AAA-rated institution options', 'Guaranteed interest earnings', 'Premature withdrawal facility'], icon: 'landmark', goal: 'Fixed Deposits', cta: 'Enquire Now' }
+  ];
+  const serviceFilters = [
+    ['all', 'All', 'layers-3'],
+    ['loans', 'Loans', 'landmark'],
+    ['insurance', 'Insurance', 'shield-check'],
+    ['investments', 'Investments', 'trending-up']
   ];
 
   const escapeHtml = (value) => String(value ?? '').replace(/[&<>"']/g, (char) => ({
@@ -239,11 +267,10 @@
     </div></section>`;
 
   const servicesPage = () => `
-    <section id="services" hidden class="page-section page-container page-content space-y-16">
-      ${pageIntro('Institutional Open-Architecture', 'Comprehensive Financial Verticals', 'Unbiased, transparent, and structured around your family’s balance sheet. Explore interest rates, eligibility criteria, and required documentation below.')}
-      <div id="service-tabs" class="flex flex-wrap items-center justify-center gap-3">${serviceData.map((cat) => `<button data-category="${cat.id}" aria-selected="${cat.id === 'loans'}" class="service-tab flex items-center gap-2.5 rounded-2xl border border-slate-200 bg-white px-5 py-3 text-xs font-bold text-slate-700 shadow-sm transition hover:bg-slate-50 sm:text-sm">${icon(cat.icon, 'h-4 w-4')} ${cat.name}</button>`).join('')}</div>
-      <div id="service-description" class="relative overflow-hidden rounded-3xl border border-slate-200 bg-white p-6 shadow-sm sm:p-8"></div>
-      <div id="service-cards" class="grid grid-cols-1 gap-8 md:grid-cols-2"></div>
+    <section id="services" hidden class="page-section page-container page-content space-y-12" aria-label="Our Services">
+      ${pageIntro('Financial solutions, made personal', 'Our Services', 'Explore practical options across loans, insurance, and investments. Compare key features, then speak with our team about a solution that fits your goals.')}
+      <div id="service-tabs" class="service-filter-list" role="tablist" aria-label="Filter services by category">${serviceFilters.map(([id, label, glyph]) => `<button id="service-tab-${id}" type="button" role="tab" data-service-category="${id}" aria-controls="service-cards" aria-selected="${id === 'all'}" tabindex="${id === 'all' ? '0' : '-1'}" class="service-tab focus-ring">${icon(glyph, 'h-4 w-4')} ${label}</button>`).join('')}</div>
+      <div id="service-cards" class="service-catalog-grid" role="tabpanel" aria-labelledby="service-tab-all" aria-live="polite"></div>
       <div class="flex flex-col items-center justify-between gap-6 rounded-3xl border border-blue-200 bg-gradient-to-r from-blue-50 via-white to-emerald-50 p-6 shadow-sm md:flex-row sm:p-8"><div class="space-y-1 text-center md:text-left"><h2 class="text-xl font-black text-slate-900">Uncertain which debt or investment structure suits your FY 2025-26?</h2><p class="text-xs text-slate-600 sm:text-sm">Our Senior Financial Planners review your tax bracket, liabilities, and liquid reserves to build a tailored blueprint.</p></div><button data-action="checkup" data-goal="Comprehensive Financial Audit" class="whitespace-nowrap rounded-xl bg-blue-600 px-6 py-3 text-xs font-bold text-white shadow-sm transition hover:bg-blue-700 sm:text-sm">Request Full Balance Sheet Audit</button></div>
     </section>`;
 
@@ -342,7 +369,7 @@
   const mount = () => {
     const root = document.getElementById('app');
     root.innerHTML = `${header()}<main id="page-host" class="flex-grow">${homePage()}${servicesPage()}${calculatorsPage()}${whyUsPage()}${contactPage()}</main>${footer()}${checkupModal()}${portalModal()}<div id="toast" class="fixed bottom-6 right-6 z-[60] hidden max-w-[calc(100vw-3rem)] items-center gap-3 rounded-2xl border border-emerald-300 bg-white px-4 py-3 text-slate-800 shadow-xl" role="status" aria-live="polite">${icon('circle-check', 'h-5 w-5 shrink-0 text-emerald-600')}<span id="toast-message" class="text-xs font-semibold sm:text-sm"></span><button data-action="dismiss-toast" class="ml-2 rounded-lg p-1 text-slate-400 transition hover:text-slate-600" aria-label="Dismiss notification">${icon('x', 'h-4 w-4')}</button></div>`;
-    renderServiceCategory('loans');
+    renderServiceCategory('all');
     renderFaqCategory(0);
     bindEvents();
     updateCalculations();
@@ -350,7 +377,7 @@
     refreshIcons();
   };
 
-  let activeService = 'loans';
+  let activeService = 'all';
   let activeFaq = 0;
   let selectedGoal = 'Home Loan';
   let currentCheckupStep = 1;
@@ -362,18 +389,25 @@
     if (window.lucide && typeof window.lucide.createIcons === 'function') window.lucide.createIcons();
   }
   function renderServiceCategory(id) {
-    const category = serviceData.find((item) => item.id === id) || serviceData[0];
-    activeService = category.id;
+    const categoryAliases = { wealth: 'investments', property: 'all' };
+    const requestedCategory = categoryAliases[id] || id;
+    activeService = serviceFilters.some(([category]) => category === requestedCategory) ? requestedCategory : 'all';
     document.querySelectorAll('.service-tab').forEach((tab) => {
-      const active = tab.dataset.category === category.id;
+      const active = tab.dataset.serviceCategory === activeService;
       tab.setAttribute('aria-selected', String(active));
-      tab.className = `service-tab flex items-center gap-2.5 rounded-2xl border px-5 py-3 text-xs font-bold transition-all duration-200 sm:text-sm ${active ? 'scale-105 border-emerald-600 bg-emerald-600 text-white shadow-md' : 'border-slate-200 bg-white text-slate-700 shadow-sm hover:bg-slate-50 hover:text-slate-900'}`;
+      tab.tabIndex = active ? 0 : -1;
+      tab.className = `service-tab focus-ring ${active ? 'is-active' : ''}`;
     });
-    document.getElementById('service-description').innerHTML = `<div class="max-w-2xl space-y-2"><span class="inline-block rounded-full border border-amber-200 bg-amber-50 px-2.5 py-1 text-xs font-bold uppercase tracking-widest text-amber-700">${category.badge}</span><h2 class="text-2xl font-black text-slate-900 sm:text-3xl">${category.tagline}</h2><p class="text-sm leading-relaxed text-slate-600">${category.description}</p></div>`;
-    document.getElementById('service-cards').innerHTML = category.cards.map((card, index) => {
-      const [title, rate, idealFor, highlights, eligibility, docs, tenure, time] = card;
-      return `<article class="flex flex-col justify-between space-y-6 rounded-3xl border border-slate-200 bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:border-emerald-300 hover:shadow-xl sm:p-8"><div class="space-y-5"><div class="flex flex-col justify-between gap-3 border-b border-slate-100 pb-4 sm:flex-row sm:items-start"><div><h3 class="text-xl font-black text-slate-900">${title}</h3><p class="mt-1 text-xs text-slate-500">${idealFor}</p></div><div class="shrink-0 rounded-xl border border-emerald-200 bg-emerald-50 px-3 py-1.5 text-right"><span class="block text-[10px] font-bold uppercase text-emerald-800">Pricing / Return</span><b class="text-sm text-emerald-700">${rate}</b></div></div><div><h4 class="mb-2 text-xs font-bold uppercase tracking-wider text-slate-500">Key Strategic Highlights</h4>${checkList(pipedList(highlights))}</div><div class="space-y-2 rounded-2xl border border-slate-200 bg-slate-50 p-4"><p class="flex items-center gap-1.5 text-xs font-bold text-amber-700">${icon('badge-check', 'h-4 w-4')} Eligibility Checklist</p><ul class="space-y-1 text-xs text-slate-600">${pipedList(eligibility).map((line) => `<li class="flex items-center gap-2"><i class="h-1.5 w-1.5 shrink-0 rounded-full bg-amber-500"></i>${line}</li>`).join('')}</ul></div><details class="group overflow-hidden rounded-2xl border border-slate-200"><summary class="flex cursor-pointer list-none items-center justify-between bg-slate-50 p-3.5 text-xs font-bold text-slate-700 transition hover:bg-slate-100"><span class="flex items-center gap-2">${icon('file-check-2', 'h-4 w-4 text-emerald-600')} Documentation Checklist (${pipedList(docs).length} Items)</span>${icon('chevron-down', 'h-4 w-4 text-slate-400 transition group-open:rotate-180 group-open:text-emerald-600')}</summary><div class="space-y-1.5 border-t border-slate-200 bg-white p-3.5 text-xs text-slate-600">${pipedList(docs).map((doc) => `<p class="flex items-center gap-2">${icon('circle-check', 'h-3.5 w-3.5 text-slate-400')} ${doc}</p>`).join('')}<p class="pt-1 text-[11px] font-semibold text-emerald-700">✓ Free doorstep pickup available in Pune &amp; PCMC.</p></div></details><p class="text-xs text-slate-500"><b>Maximum tenure:</b> ${tenure}</p></div><div class="flex flex-col items-center justify-between gap-3 border-t border-slate-100 pt-4 sm:flex-row"><p class="flex items-center gap-1.5 self-start text-[11px] font-medium text-slate-500 sm:self-center">${icon('clock-3', 'h-3.5 w-3.5 text-emerald-600')} Turnaround: ${time}</p><button data-action="checkup" data-goal="${escapeHtml(title)}" class="flex w-full items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-emerald-600 to-teal-600 px-5 py-2.5 text-xs font-bold text-white shadow-sm transition hover:scale-[1.01] sm:w-auto sm:text-sm">Book Consultation for this Service ${icon('arrow-right', 'h-4 w-4')}</button></div></article>`;
+    const selectedFilter = serviceFilters.find(([category]) => category === activeService);
+    const services = serviceCatalog.filter((service) => activeService === 'all' || service.category === activeService);
+    const cards = services.map((service) => {
+      const categoryName = serviceFilters.find(([category]) => category === service.category)[1];
+      return `<article class="service-card"><div class="service-card__content"><div class="service-card__icon">${icon(service.icon, 'h-6 w-6')}</div><span class="service-card__category">${escapeHtml(categoryName)}</span><h2 class="service-card__title">${escapeHtml(service.title)}</h2><p class="service-card__tagline">${escapeHtml(service.tagline)}</p><p class="service-card__description">${escapeHtml(service.description)}</p><div class="service-card__features"><h3>Key features</h3><ul>${service.highlights.map((feature) => `<li>${icon('circle-check', 'h-4 w-4')}<span>${escapeHtml(feature)}</span></li>`).join('')}</ul></div></div><button type="button" data-action="checkup" data-goal="${escapeHtml(service.goal)}" class="service-card__cta">${escapeHtml(service.cta)} ${icon('arrow-right', 'h-4 w-4')}</button></article>`;
     }).join('');
+    const cardList = document.getElementById('service-cards');
+    cardList.setAttribute('aria-labelledby', `service-tab-${activeService}`);
+    cardList.setAttribute('aria-label', `${selectedFilter[1]} services`);
+    cardList.innerHTML = cards;
     refreshIcons();
   }
   function renderFaqCategory(index) {
@@ -713,7 +747,7 @@
         document.getElementById('home-emi').hidden = target.dataset.homeTab !== 'emi';
         return;
       }
-      if (target.dataset.category) { renderServiceCategory(target.dataset.category); return; }
+      if (target.dataset.serviceCategory) { renderServiceCategory(target.dataset.serviceCategory); return; }
       if (target.dataset.calcTab) {
         document.querySelectorAll('.calc-tab').forEach((button) => {
           const active = button.dataset.calcTab === target.dataset.calcTab;
@@ -811,6 +845,18 @@
       }
     });
     root.addEventListener('keydown', (event) => {
+      const currentTab = event.target.closest('[role="tab"][data-service-category]');
+      if (currentTab && ['ArrowRight', 'ArrowLeft', 'Home', 'End'].includes(event.key)) {
+        event.preventDefault();
+        const tabs = Array.from(document.querySelectorAll('[role="tab"][data-service-category]'));
+        const currentIndex = tabs.indexOf(currentTab);
+        const nextIndex = event.key === 'Home' ? 0
+          : event.key === 'End' ? tabs.length - 1
+            : (currentIndex + (event.key === 'ArrowRight' ? 1 : -1) + tabs.length) % tabs.length;
+        tabs[nextIndex].focus();
+        tabs[nextIndex].click();
+        return;
+      }
       if (event.key === 'Escape') {
         ['checkup-modal', 'portal-modal'].forEach((id) => {
           if (!document.getElementById(id).classList.contains('hidden')) closeModal(id);

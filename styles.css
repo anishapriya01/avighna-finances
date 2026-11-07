@@ -24,12 +24,38 @@ input[type="range"]::-moz-range-thumb { width: 16px; height: 16px; border: 3px s
 .mobile-drawer { max-height: 0; overflow: hidden; transition: max-height .3s ease; }
 .mobile-drawer.is-open { max-height: 36rem; }
 .service-tab[aria-selected="true"], .calc-tab[aria-selected="true"], .faq-tab[aria-selected="true"] { box-shadow: 0 4px 12px rgba(15,23,42,.08); }
+.service-filter-list { display: flex; flex-wrap: wrap; justify-content: center; gap: .75rem; }
+.service-tab { display: inline-flex; align-items: center; gap: .5rem; border: 1px solid #e2e8f0; border-radius: 1rem; background: #fff; padding: .75rem 1.25rem; color: #334155; font-size: .875rem; font-weight: 700; transition: background-color .2s ease, color .2s ease, border-color .2s ease, box-shadow .2s ease; }
+.service-tab:hover { background: #f8fafc; border-color: #cbd5e1; }
+.service-tab.is-active { border-color: #059669; background: #059669; color: #fff; box-shadow: 0 8px 18px rgba(5,150,105,.18); }
+.service-catalog-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); align-items: stretch; gap: 1.25rem; }
+.service-card { display: flex; min-width: 0; flex-direction: column; justify-content: space-between; gap: 1.5rem; border: 1px solid #e2e8f0; border-radius: 1.5rem; background: #fff; padding: 1.5rem; box-shadow: 0 4px 12px rgba(15,23,42,.04); transition: transform .2s ease, border-color .2s ease, box-shadow .2s ease; }
+.service-card:hover { transform: translateY(-3px); border-color: #6ee7b7; box-shadow: 0 16px 32px rgba(15,23,42,.1); }
+.service-card__content { display: flex; flex-direction: column; align-items: flex-start; }
+.service-card__icon { display: grid; width: 3rem; height: 3rem; place-items: center; border: 1px solid #a7f3d0; border-radius: 1rem; background: linear-gradient(135deg, #ecfdf5, #eff6ff); color: #047857; }
+.service-card__category { margin-top: 1rem; border-radius: 999px; background: #f0fdf4; padding: .3rem .65rem; color: #047857; font-size: .6875rem; font-weight: 800; letter-spacing: .06em; text-transform: uppercase; }
+.service-card__title { margin: .75rem 0 0; color: #0f172a; font-size: 1.125rem; font-weight: 800; line-height: 1.4; }
+.service-card__tagline { margin: .35rem 0 0; color: #047857; font-size: .8125rem; font-weight: 700; line-height: 1.5; }
+.service-card__description { margin: .75rem 0 0; color: #475569; font-size: .8125rem; line-height: 1.65; }
+.service-card__features { width: 100%; margin-top: 1.25rem; border-top: 1px solid #f1f5f9; padding-top: 1rem; }
+.service-card__features h3 { margin: 0; color: #64748b; font-size: .6875rem; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; }
+.service-card__features ul { display: grid; gap: .65rem; margin: .75rem 0 0; padding: 0; list-style: none; }
+.service-card__features li { display: flex; align-items: flex-start; gap: .5rem; color: #475569; font-size: .75rem; line-height: 1.5; }
+.service-card__features li svg { flex: 0 0 auto; margin-top: .05rem; color: #059669; }
+.service-card__cta { display: flex; width: 100%; align-items: center; justify-content: center; gap: .5rem; border: 0; border-radius: .75rem; background: linear-gradient(100deg, #059669, #0d9488); padding: .8rem 1rem; color: white; font-size: .8125rem; font-weight: 800; transition: box-shadow .2s ease, transform .2s ease; }
+.service-card__cta:hover { transform: translateY(-1px); box-shadow: 0 8px 18px rgba(5,150,105,.22); }
+.service-card__cta:focus-visible { outline: 3px solid rgba(16,185,129,.45); outline-offset: 3px; }
 .focus-ring:focus-visible { outline: 3px solid rgba(16,185,129,.45); outline-offset: 3px; }
 .no-scrollbar::-webkit-scrollbar { display: none; }
 .no-scrollbar { scrollbar-width: none; }
 @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
 @media (max-width: 640px) {
   .page-content { padding-top: 7.5rem; }
+  .service-catalog-grid { grid-template-columns: minmax(0, 1fr); gap: 1rem; }
+  .service-card { padding: 1.25rem; }
+}
+@media (min-width: 641px) and (max-width: 1024px) {
+  .service-catalog-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
