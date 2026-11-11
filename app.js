@@ -151,11 +151,11 @@
   const pipedList = (value) => value.split('|').map((item) => item.trim()).filter(Boolean);
   const checkList = (items) => `<ul class="mt-4 space-y-2 text-xs text-slate-600">${items.map((item) => `<li class="flex items-start gap-2">${icon('circle-check', 'mt-0.5 h-4 w-4 shrink-0 text-emerald-600')}<span>${escapeHtml(item)}</span></li>`).join('')}</ul>`;
   const header = () => `
-    <header id="site-header" class="fixed inset-x-0 top-0 z-40 border-b border-slate-200/70 bg-white/90 backdrop-blur-md transition-all duration-300">
+    <header id="site-header" class="fixed inset-x-0 top-0 z-40 border-b border-amber-400/40 bg-white/90 shadow-[0_4px_20px_rgba(217,119,6,0.08)] backdrop-blur-md transition-all duration-300">
       <div class="mx-auto max-w-7xl px-4 py-3 sm:px-6 sm:py-4 lg:px-8">
         <div class="flex items-center justify-between gap-4">
           <button data-nav="home" class="group flex items-center gap-3 text-left" aria-label="Avighna Financial Services home">
-            <span class="flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br from-emerald-500 via-teal-600 to-blue-600 text-white shadow-md shadow-emerald-500/20 sm:h-11 sm:w-11">${icon('trending-up', 'h-6 w-6')}</span>
+            <img src="./src/assets/images/logo.jpeg" alt="Avighna Financial Services logo" class="h-14 w-14 rounded-xl border border-amber-400/40 bg-white object-contain p-0.5 shadow-sm shadow-amber-500/20 sm:h-16 sm:w-16">
             <span><span class="flex items-center gap-1.5 text-xl font-black tracking-tight text-slate-900 group-hover:text-emerald-600 sm:text-2xl">AVIGHNA <i class="h-2 w-2 animate-pulse rounded-full bg-amber-500"></i></span><span class="block text-[10px] font-semibold uppercase tracking-widest text-slate-500 sm:text-xs">Financial Services • Pune</span></span>
           </button>
           <nav class="hidden items-center gap-1 rounded-full border border-slate-200 bg-slate-100/90 p-1.5 shadow-inner lg:flex" aria-label="Main navigation">
@@ -167,14 +167,14 @@
           </div>
           <div class="flex items-center gap-2 md:hidden">
             <button data-action="checkup" class="rounded-lg bg-emerald-600 px-3 py-1.5 text-xs font-bold text-white shadow-sm">Checkup</button>
-            <button id="mobile-menu-button" class="rounded-xl border border-slate-200 p-2 text-slate-700 hover:bg-slate-100" aria-label="Toggle navigation" aria-expanded="false">${icon('menu', 'h-6 w-6')}</button>
+            <button id="mobile-menu-button" class="rounded-xl border border-amber-400/40 p-2 text-slate-700 transition hover:bg-amber-50" aria-label="Toggle navigation" aria-expanded="false">${icon('menu', 'h-6 w-6')}</button>
           </div>
         </div>
         <div id="mobile-drawer" class="mobile-drawer md:hidden">
           <nav class="space-y-1 pt-4" aria-label="Mobile navigation">
             ${NAV.map(([id, label]) => `<button data-nav="${id}" class="mobile-nav-link flex w-full items-center justify-between rounded-xl px-4 py-3 text-left text-base font-semibold text-slate-700 transition hover:bg-slate-100">${label}${icon('chevron-right', 'h-4 w-4 text-slate-400')}</button>`).join('')}
           </nav>
-          <div class="mt-3 flex flex-col gap-2.5 border-t border-slate-200 py-4">
+          <div class="mt-3 flex flex-col gap-2.5 border-t border-amber-400/40 py-4">
             <button data-action="portal" class="flex items-center justify-center gap-2 rounded-xl border border-slate-300 bg-white px-4 py-2.5 text-sm font-semibold text-slate-700">${icon('user-round-check', 'h-4 w-4 text-blue-600')} Access Client Portal</button>
             <button data-action="checkup" class="flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-emerald-600 to-teal-600 px-4 py-3 text-sm font-bold text-white shadow-md">${icon('sparkles', 'h-4 w-4 text-amber-300')} Get Free Financial Checkup</button>
             <p class="flex items-center justify-center gap-2 pt-1 text-center text-xs text-slate-500">${icon('shield-check', 'h-3.5 w-3.5 text-emerald-600')} AMFI Registered & Verified Pune Advisory</p>
@@ -184,16 +184,16 @@
     </header>`;
 
   const footer = () => `
-    <footer class="relative overflow-hidden border-t border-slate-200 bg-slate-100 pt-16 pb-12 text-slate-700">
-      <div class="pointer-events-none absolute left-1/2 top-0 h-32 w-3/4 -translate-x-1/2 bg-emerald-500/5 blur-3xl"></div>
+    <footer class="relative overflow-hidden border-t border-amber-400/40 bg-slate-100 pt-16 pb-12 text-slate-700">
+      <div class="pointer-events-none absolute left-1/2 top-0 h-32 w-3/4 -translate-x-1/2 bg-gradient-to-r from-amber-500/10 to-emerald-500/10 blur-3xl"></div>
       <div class="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div class="grid grid-cols-1 gap-10 border-b border-slate-200 pb-12 md:grid-cols-2 lg:grid-cols-5">
+        <div class="grid grid-cols-1 gap-10 border-b border-amber-400/40 pb-12 md:grid-cols-2 lg:grid-cols-5">
           <div class="space-y-4 lg:col-span-2">
-            <div class="flex items-center gap-3"><span class="flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br from-emerald-500 via-teal-600 to-blue-600 text-white">${icon('trending-up', 'h-6 w-6')}</span><span><b class="text-2xl font-black tracking-tight text-slate-900">AVIGHNA<span class="ml-1 text-xl text-amber-500">.</span></b><small class="block text-[11px] font-semibold uppercase tracking-wider text-slate-500">Financial Services • Pune</small></span></div>
+            <div class="flex items-center gap-3"><img src="./src/assets/images/logo.jpeg" alt="Avighna Financial Services logo" class="h-14 w-14 rounded-xl border border-amber-400/40 bg-white object-contain p-0.5 shadow-sm shadow-amber-500/20 sm:h-16 sm:w-16"><span><b class="text-2xl font-black tracking-tight text-slate-900">AVIGHNA<span class="ml-1 text-xl text-amber-500">.</span></b><small class="block text-[11px] font-semibold uppercase tracking-wider text-slate-500">Financial Services • Pune</small></span></div>
             <p class="pr-4 text-sm leading-relaxed text-slate-600">Pune’s premier fiduciary financial advisory firm. We architect bespoke solutions across Home &amp; Business Loans, Mutual Funds, Disciplined SIPs, Risk Protection, and Prime Real Estate. Transparent, unbiased, and engineered for your real life.</p>
             <div class="flex flex-wrap gap-2"><span class="inline-flex items-center gap-1.5 rounded-full border border-emerald-200 bg-emerald-50 px-3 py-1 text-xs font-semibold text-emerald-800">${icon('shield-check', 'h-3.5 w-3.5 text-emerald-600')} AMFI Registered ARN-284910</span><span class="inline-flex items-center gap-1.5 rounded-full border border-blue-200 bg-blue-50 px-3 py-1 text-xs font-semibold text-blue-800">${icon('lock-keyhole', 'h-3.5 w-3.5 text-blue-600')} Fiduciary Zero-Conflict Model</span></div>
           </div>
-          <div><h4 class="mb-3 text-sm font-bold uppercase tracking-wider text-slate-900">Navigation</h4><ul class="space-y-2 text-sm">${NAV.map(([id, label]) => `<li><button data-nav="${id}" class="font-medium transition hover:text-emerald-600">${id === 'why-us' ? 'Why Us & Partner Ecosystem' : id === 'services' ? 'All 4 Advisory Verticals' : id === 'calculators' ? 'Interactive Financial Calculators' : id === 'contact' ? 'Contact & Pune Office Desk' : 'Home Overview'}</button></li>`).join('')}</ul></div>
+          <div><h4 class="mb-3 text-sm font-bold uppercase tracking-wider text-slate-900">Navigation</h4><ul class="space-y-2 text-sm">${NAV.map(([id, label]) => `<li><button data-nav="${id}" class="block w-full text-left leading-relaxed font-medium transition hover:text-emerald-600">${id === 'why-us' ? 'Why Us & Partner Ecosystem' : id === 'services' ? 'All 4 Advisory Verticals' : id === 'calculators' ? 'Interactive Financial Calculators' : id === 'contact' ? 'Contact & Pune Office Desk' : 'Home Overview'}</button></li>`).join('')}</ul></div>
           <div><h4 class="mb-3 text-sm font-bold uppercase tracking-wider text-slate-900">Core Offerings</h4><ul class="space-y-2 text-sm">${['Home Loans (from 8.35%)', 'Business & MSME Capital', 'Direct Mutual Funds & SIPs', 'Term Life & Health Cover', 'Pune Property Advisory'].map((item) => `<li><button data-nav="services" class="font-medium transition hover:text-emerald-600">${item}</button></li>`).join('')}</ul></div>
           <div><h4 class="mb-3 text-sm font-bold uppercase tracking-wider text-slate-900">Pune Headquarters</h4><div class="space-y-2.5 text-xs text-slate-600">
             <p class="flex items-start gap-2">${icon('map-pin', 'mt-0.5 h-4 w-4 shrink-0 text-emerald-600')}<span>Level 4, Amar Paradigm, Baner Road, near Balewadi High Street, Pune, MH 411045</span></p>
@@ -281,8 +281,8 @@
   const resultsShell = (label, id, amountClass, sub = '') => `<div class="border-b border-slate-200 pb-6 text-center"><span class="text-xs font-bold uppercase tracking-widest text-slate-500">${label}</span><p id="${id}" class="mt-2 font-mono text-3xl font-black text-${amountClass}-600 sm:text-4xl lg:text-5xl"></p>${sub ? `<p id="${id}-sub" class="mt-1 text-xs text-slate-500"></p>` : ''}</div>`;
   const calcAction = (text, goal, color = 'emerald') => `<button data-action="checkup" data-goal="${escapeHtml(goal)}" class="flex w-full items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-${color}-600 to-teal-600 px-6 py-3.5 text-sm font-bold text-white shadow-md transition hover:scale-[1.01]">${text} ${icon('arrow-right', 'h-4 w-4')}</button>`;
   const calculatorsPage = () => {
-    const sipControls = `${range('sip-monthly', 'Monthly Investment', 500, 2000000, 500, 25000, ['₹500', '₹50,000', '₹5 Lakhs', '₹20 Lakhs / mo'])}${range('sip-rate', 'Expected Annual Return (CAGR)', 5, 25, .5, 13, ['5% (Debt)', '12% - 14% Equity', '18% (Alpha)', '25%'], 'blue')}${range('sip-years', 'Investment Horizon', 1, 30, 1, 15, ['1 Year', '10 Years', '20 Years', '30 Years'], 'slate')}<div class="space-y-2 rounded-2xl border border-slate-200 bg-slate-50 p-4"><p class="text-xs font-bold uppercase tracking-wider text-slate-500">Milestone Wealth Projections</p><div id="sip-milestones" class="grid grid-cols-2 gap-2 text-xs sm:grid-cols-3"></div></div>`;
-    const sipResult = `${resultsShell('Estimated Total Wealth Corpus', 'sip-corpus', 'emerald', 'exact')}<div class="space-y-3 text-xs sm:text-sm"><p class="flex justify-between"><span class="text-slate-600">Total Capital Invested:</span><b id="sip-invested" class="font-mono text-slate-900"></b></p><p class="flex justify-between"><span class="text-slate-600">Estimated Wealth Gain:</span><b id="sip-gain" class="font-mono text-emerald-600"></b></p></div><div><div class="flex justify-between text-xs font-bold"><span id="sip-invested-percent" class="text-blue-700"></span><span id="sip-return-percent" class="text-emerald-700"></span></div><div class="mt-2 flex h-3.5 overflow-hidden rounded-full bg-slate-200"><div id="sip-principal-bar" class="bg-blue-600 transition-all duration-300"></div><div id="sip-return-bar" class="bg-emerald-500 transition-all duration-300"></div></div></div>${calcAction('Setup This SIP Portfolio with Avighna', 'Wealth Creation')}`;
+    const sipControls = `${range('sip-monthly', 'Monthly Investment', 500, 500000, 500, 10000, ['₹500', '₹1,00,000', '₹3,00,000', '₹5,00,000 / mo'])}${range('sip-rate', 'Expected Annual Return (CAGR)', 1, 30, .5, 12, ['1%', '10%', '20%', '30%'], 'blue')}${range('sip-years', 'Investment Horizon', 1, 30, 1, 10, ['1 Year', '10 Years', '20 Years', '30 Years'], 'slate')}<div class="space-y-2 rounded-2xl border border-slate-200 bg-slate-50 p-4"><p class="text-xs font-bold uppercase tracking-wider text-slate-500">Milestone Wealth Projections</p><div id="sip-milestones" class="grid grid-cols-2 gap-2 text-xs sm:grid-cols-3"></div></div>`;
+    const sipResult = `${resultsShell('Estimated Total Wealth Corpus', 'sip-corpus', 'emerald', 'exact')}<div class="space-y-3 text-xs sm:text-sm"><p class="flex justify-between"><span class="text-slate-600">Total Capital Invested:</span><b id="sip-invested" class="font-mono text-slate-900"></b></p><p class="flex justify-between"><span class="text-slate-600">Estimated Wealth Gain:</span><b id="sip-gain" class="font-mono text-emerald-600"></b></p></div><div><div class="flex justify-between text-xs font-bold"><span id="sip-invested-percent" class="text-blue-700"></span><span id="sip-return-percent" class="text-emerald-700"></span></div><div class="mt-2 flex h-3.5 overflow-hidden rounded-full bg-slate-200"><div id="sip-principal-bar" class="bg-blue-600 transition-all duration-300"></div><div id="sip-return-bar" class="bg-emerald-500 transition-all duration-300"></div></div></div>${calcAction('Setup This SIP Portfolio with Avighna', 'Wealth Creation')}<div class="space-y-3 rounded-2xl border border-emerald-200 bg-white p-4 shadow-sm"><div><h3 class="text-sm font-bold text-slate-900">Send your calculation to WhatsApp</h3><p class="mt-1 text-xs text-slate-500">Enter your WhatsApp number with country code, such as +91.</p></div><div><label for="sip-whatsapp-phone" class="mb-1 block text-xs font-semibold text-slate-700">WhatsApp number</label><input id="sip-whatsapp-phone" type="tel" autocomplete="tel" placeholder="+91 98765 43210" aria-describedby="sip-whatsapp-error" class="w-full rounded-xl border border-slate-300 bg-white px-3 py-2.5 text-sm focus:border-emerald-500 focus:outline-none focus:ring-2 focus:ring-emerald-500"><p id="sip-whatsapp-error" class="mt-1 text-xs text-rose-600" role="alert" hidden></p></div><button type="button" data-action="send-sip-whatsapp" class="flex w-full items-center justify-center gap-2 rounded-xl bg-emerald-600 px-4 py-2.5 text-sm font-bold text-white shadow-sm transition hover:bg-emerald-700">${icon('message-circle', 'h-4 w-4')} Send Calculation to WhatsApp</button></div>`;
     const emiControls = `${range('loan-principal', 'Principal Loan Amount', 100000, 50000000, 100000, 6500000, ['₹1 Lakh', '₹1 Crore', '₹3 Crores', '₹5 Crores'], 'blue')}${range('loan-rate', 'Interest Rate (p.a.)', 6, 18, .05, 8.5, ['6.0%', '8.35% Tier-1 Home', '12.0% MSME', '18.0%'], 'emerald')}${range('loan-tenure', 'Loan Tenure', 1, 30, 1, 20, ['1 Year', '10 Years', '20 Years', '30 Years'], 'slate')}<div class="flex items-start gap-2.5 rounded-2xl border border-emerald-200 bg-emerald-50 p-4 text-xs text-emerald-800">${icon('circle-check', 'mt-0.5 h-4 w-4 shrink-0 text-emerald-600')}<span><b>Balance Transfer Tip:</b> If your current home loan rate exceeds 9.0%, transferring to an 8.35% slab can save interest over 20 years. Actual savings depend on loan terms and eligibility.</span></div>`;
     const emiResult = `${resultsShell('Monthly Installment (EMI)', 'emi-result', 'blue', 'tenure')}<div class="space-y-3 text-xs sm:text-sm"><p class="flex justify-between"><span class="text-slate-600">Principal Amount:</span><b id="emi-principal" class="font-mono"></b></p><p class="flex justify-between"><span class="text-slate-600">Total Interest Payable:</span><b id="emi-interest" class="font-mono text-amber-600"></b></p><p class="flex justify-between border-t border-slate-200 pt-2 font-bold"><span class="text-slate-700">Total Sum Payable:</span><b id="emi-total" class="font-mono text-slate-900"></b></p></div><div><div class="flex justify-between text-xs font-bold"><span id="emi-principal-percent" class="text-blue-700"></span><span id="emi-interest-percent" class="text-amber-700"></span></div><div class="mt-2 flex h-3.5 overflow-hidden rounded-full bg-slate-200"><div id="emi-principal-bar" class="bg-blue-600 transition-all duration-300"></div><div id="emi-interest-bar" class="bg-amber-500 transition-all duration-300"></div></div></div>${calcAction('Apply for Sanction with 30+ Banks', 'Home Loan', 'blue')}`;
     const retirementControls = `<div class="grid grid-cols-1 gap-4 sm:grid-cols-2">${range('current-age', 'Current Age', 20, 65, 1, 32, ['20 Yrs', '', '', '65 Yrs'], 'slate')}${range('retirement-age', 'Target Retirement Age', 33, 75, 1, 58, ['33 Yrs', '', '', '75 Yrs'])}</div>${range('monthly-expenses', 'Current Monthly Household Expenses', 15000, 500000, 5000, 60000, ['₹15,000', '₹1 Lakh', '₹2.5 Lakhs', '₹5 Lakhs / mo'], 'blue')}${range('inflation-rate', 'Expected Annual Inflation Rate', 4, 10, .5, 6, ['4% Optimistic', '6% Standard CPI', '', '10%'], 'slate')}<div class="space-y-1 rounded-2xl border border-slate-200 bg-slate-50 p-4 text-xs text-slate-600"><p>• Time left to build corpus: <b id="retire-years" class="text-slate-900"></b></p><p>• Future Monthly Expense: <b id="retire-expense" class="font-mono text-amber-700"></b></p></div>`;
@@ -439,6 +439,12 @@
     if (monthlyRate === 0) return monthly * months;
     return monthly * ((Math.pow(1 + monthlyRate, months) - 1) / monthlyRate) * (1 + monthlyRate);
   }
+  function sipFutureValue(monthly, annualPercent, years) {
+    const monthlyRate = Math.pow(1 + annualPercent / 100, 1 / 12) - 1;
+    const months = years * 12;
+    if (monthlyRate === 0) return monthly * months;
+    return monthly * ((Math.pow(1 + monthlyRate, months) - 1) / monthlyRate) * (1 + monthlyRate);
+  }
   function calculateEmi(principal, annualPercent, years) {
     const monthlyRate = annualPercent / 12 / 100;
     const months = years * 12;
@@ -491,7 +497,7 @@
       const sipRate = getValue('sip-rate');
       const years = getValue('sip-years');
       const invested = sipMonthly * years * 12;
-      const corpus = annuityFutureValue(sipMonthly, sipRate, years);
+      const corpus = sipFutureValue(sipMonthly, sipRate, years);
       const gain = Math.max(0, corpus - invested);
       const investedPct = Math.round(invested / corpus * 100) || 0;
       const returnsPct = Math.round(gain / corpus * 100) || 0;
@@ -504,7 +510,7 @@
       setBar('sip-principal-bar', investedPct);
       setBar('sip-return-bar', returnsPct);
       const milestones = [5, 10, 15, 20, 25, 30].filter((year) => year <= years);
-      document.getElementById('sip-milestones').innerHTML = milestones.map((year) => `<div class="rounded-xl border border-slate-200 bg-white p-2.5"><span class="block text-[10px] text-slate-500">At Year ${year}:</span><b class="font-mono text-slate-900">${compact(annuityFutureValue(sipMonthly, sipRate, year))}</b></div>`).join('');
+      document.getElementById('sip-milestones').innerHTML = milestones.map((year) => `<div class="rounded-xl border border-slate-200 bg-white p-2.5"><span class="block text-[10px] text-slate-500">At Year ${year}:</span><b class="font-mono text-slate-900">${compact(sipFutureValue(sipMonthly, sipRate, year))}</b></div>`).join('');
     }
 
     const principal = getValue('loan-principal');
@@ -728,6 +734,27 @@
       }
       if (target.dataset.action === 'checkup') { openCheckup(target.dataset.goal || ''); return; }
       if (target.dataset.action === 'portal') { openPortal(); return; }
+      if (target.dataset.action === 'send-sip-whatsapp') {
+        const phoneInput = document.getElementById('sip-whatsapp-phone');
+        const error = document.getElementById('sip-whatsapp-error');
+        const phone = phoneInput.value.trim();
+        const phoneDigits = phone.replace(/\D/g, '');
+        if (!phone.startsWith('+') || phoneDigits.length < 7 || phoneDigits.length > 15) {
+          error.textContent = 'Enter a valid WhatsApp number with country code, starting with + (7–15 digits).';
+          error.hidden = false;
+          phoneInput.focus();
+          return;
+        }
+        error.hidden = true;
+        const monthly = getValue('sip-monthly');
+        const annualReturn = getValue('sip-rate');
+        const years = getValue('sip-years');
+        const invested = monthly * years * 12;
+        const maturity = sipFutureValue(monthly, annualReturn, years);
+        const message = `Hello Avighna Financial Services, here is my SIP calculation summary: Monthly SIP: ${inr(monthly)} | Tenure: ${years} Yrs | Expected Return: ${annualReturn}% | Total Invested: ${inr(invested)} | Projected Value: ${inr(maturity)}. Please connect with me for expert guidance!`;
+        window.open(`https://wa.me/${phoneDigits}?text=${encodeURIComponent(message)}`, '_blank');
+        return;
+      }
       if (target.dataset.action === 'dismiss-toast') { hideToast(); return; }
       if (target.dataset.action === 'tax-cert') { showToast('Tax certificate download is a simulated portal preview.'); return; }
       if (target.id === 'mobile-menu-button') {
@@ -795,6 +822,10 @@
 
     root.addEventListener('input', (event) => {
       if (event.target.matches('input[type="range"]')) updateCalculations();
+      if (event.target.id === 'sip-whatsapp-phone') {
+        const error = document.getElementById('sip-whatsapp-error');
+        error.hidden = true;
+      }
     });
     root.addEventListener('click', (event) => {
       if (event.target.classList.contains('modal-backdrop')) closeModal(event.target.id);
