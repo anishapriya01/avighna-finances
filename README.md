@@ -13,3 +13,5 @@ Open `index.html` directly in a modern browser, or serve this folder with any st
 - Services include category switching and expandable document checklists; Contact includes categorized FAQ accordions.
 - The complimentary financial checkup is a three-step form with client-side validation and confirmation.
 - The client portal includes a sample portfolio view and simulated OTP flow. Forms and OTP are demo interactions and do not send or store information.
+- Privacy, cookie, grievance, disclaimer, and terms pages share the site's visual system and footer. Inquiry consent is required before demo form confirmation; grievance requests open a prefilled email draft and are not submitted until sent.
+- Cookie preferences are stored locally in the browser. Optional analytics are not currently configured by the site.

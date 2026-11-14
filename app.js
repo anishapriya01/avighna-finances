@@ -187,7 +187,7 @@
     <footer class="relative overflow-hidden border-t border-amber-400/40 bg-slate-100 pt-16 pb-12 text-slate-700">
       <div class="pointer-events-none absolute left-1/2 top-0 h-32 w-3/4 -translate-x-1/2 bg-gradient-to-r from-amber-500/10 to-emerald-500/10 blur-3xl"></div>
       <div class="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div class="grid grid-cols-1 gap-10 border-b border-amber-400/40 pb-12 md:grid-cols-2 lg:grid-cols-5">
+        <div class="grid grid-cols-1 gap-10 border-b border-amber-400/40 pb-12 md:grid-cols-2 lg:grid-cols-6">
           <div class="space-y-4 lg:col-span-2">
             <div class="flex items-center gap-3"><img src="./src/assets/images/logo.jpeg" alt="Avighna Financial Services logo" class="h-14 w-14 rounded-xl border border-amber-400/40 bg-white object-contain p-0.5 shadow-sm shadow-amber-500/20 sm:h-16 sm:w-16"><span><b class="text-2xl font-black tracking-tight text-slate-900">AVIGHNA<span class="ml-1 text-xl text-amber-500">.</span></b><small class="block text-[11px] font-semibold uppercase tracking-wider text-slate-500">Financial Services • Pune</small></span></div>
             <p class="pr-4 text-sm leading-relaxed text-slate-600">Transparent wealth advisory across Home &amp; Business Loans, Mutual Funds, Disciplined SIPs, Risk Protection, and Prime Real Estate, operating in alignment with India's DPDP Act 2023 standards.</p>
@@ -202,13 +202,20 @@
             <p class="flex items-center gap-2">${icon('clock-3', 'h-4 w-4 text-amber-600')} Mon – Sat: 9:30 AM – 7:00 PM IST</p>
             <button data-action="checkup" class="mt-2 flex w-full items-center justify-center gap-1.5 rounded-xl border border-emerald-300 bg-white px-3 py-2 text-xs font-bold text-emerald-700 shadow-sm transition hover:bg-emerald-50">Schedule Pune Consultation ${icon('arrow-up-right', 'h-3.5 w-3.5')}</button>
           </div></div>
+          <div><h4 class="mb-3 text-sm font-bold uppercase tracking-wider text-slate-900">Legal &amp; Compliance</h4><ul class="space-y-2">${[
+            ['terms-and-conditions.html', 'Terms & Conditions'],
+            ['privacy-policy.html', 'Privacy Policy'],
+            ['cookie-policy.html', 'Cookie Policy'],
+            ['grievance-redressal.html', 'Grievance Redressal'],
+            ['disclaimer.html', 'Disclaimer']
+          ].map(([href, label]) => `<li><a href="./${href}" class="font-medium transition hover:text-emerald-600">${label}</a></li>`).join('')}<li class="pt-2"><button type="button" data-cookie-preferences class="text-left font-bold text-emerald-700 transition hover:text-emerald-900">Manage Cookie Preferences</button></li></ul></div>
         </div>
         <div class="space-y-2 border-b border-slate-200 py-8 text-[11px] leading-relaxed text-slate-500">
           <p class="font-bold text-slate-700">Regulatory Disclosure &amp; Disclaimer:</p>
           <p>Avighna Financial Services provides transparent wealth advisory in alignment with India's DPDP Act 2023 standards and acts as a distributor and referral advisor for financial products. <strong class="text-slate-700">Mutual Fund investments are subject to market risks; read all scheme-related documents carefully before investing.</strong></p>
           <p>Loan sanctions, disbursals, and applicable interest rates are at the sole discretion of the respective financing institutions and depend on borrower eligibility, CIBIL credit parameters, and institutional lending policies. Insurance is the subject matter of solicitation; policies are underwritten by IRDAI-registered insurers.</p>
         </div>
-        <div class="flex flex-col items-center justify-between gap-3 pt-6 text-xs text-slate-500 sm:flex-row"><p>© 2026 Avighna Financial Services. All rights reserved.</p><div class="flex items-center gap-4"><span>Privacy &amp; DPDP Act 2023</span><span>•</span><span>Terms of Advisory</span><span>•</span><span>Fair Practice Code</span></div></div>
+        <div class="flex flex-col items-center justify-between gap-3 pt-6 text-xs text-slate-500 sm:flex-row"><p>© 2026 Avighna Financial Services. All rights reserved.</p><p>Financial product terms remain subject to the relevant provider’s documents and approvals.</p></div>
       </div>
     </footer>`;
 
@@ -705,6 +712,11 @@
   function submitCheckup(event) {
     event.preventDefault();
     const form = event.target;
+    const privacyConsent = form.elements.namedItem('privacy-consent');
+    if (!(privacyConsent instanceof HTMLInputElement) || !privacyConsent.checked) {
+      if (privacyConsent instanceof HTMLInputElement) privacyConsent.reportValidity();
+      return;
+    }
     const name = form.elements.namedItem('name').value.trim();
     const phone = form.elements.namedItem('phone').value.trim();
     const email = form.elements.namedItem('email').value.trim();
