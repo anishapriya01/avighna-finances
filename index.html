@@ -1,42 +1,1163 @@
 <!doctype html>
 <html lang="en" class="scroll-smooth">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="theme-color" content="#ffffff">
-    <title>Avighna Financial Services | Wealth, Loans &amp; Advisory Pune</title>
-    <meta name="description" content="Avighna Financial Services offers fiduciary financial advisory in Pune for loans, mutual funds, SIPs, insurance, and property.">
-    <link rel="icon" type="image/jpeg" href="./src/assets/images/logo.jpeg">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            fontFamily: { sans: ['Plus Jakarta Sans', 'Inter', 'system-ui', 'sans-serif'] },
-            colors: { gold: { 300: '#FCD34D', 400: '#FBBF24', 500: '#F59E0B', 600: '#D97706' } },
-            animation: {
-              'fade-in': 'fadeIn .25s ease-out',
-              'bounce-short': 'bounceShort 2.5s ease-in-out infinite',
-              'spin-slow': 'spin 4s linear infinite'
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#ffffff">
+  <title>Avighna Financial Services | Wealth, Loans &amp; Advisory Pune</title>
+  <meta name="description"
+    content="Avighna Financial Services offers fiduciary financial advisory in Pune for loans, mutual funds, SIPs, insurance, and property.">
+  <link rel="icon" type="image/jpeg" href="./src/assets/images/logo.jpeg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Plus Jakarta Sans', 'Inter', 'system-ui', 'sans-serif']
+          },
+          colors: {
+            gold: {
+              300: '#FCD34D',
+              400: '#FBBF24',
+              500: '#F59E0B',
+              600: '#D97706'
+            }
+          },
+          animation: {
+            'fade-in': 'fadeIn .25s ease-out',
+            'bounce-short': 'bounceShort 2.5s ease-in-out infinite',
+            'spin-slow': 'spin 4s linear infinite'
+          },
+          keyframes: {
+            fadeIn: {
+              from: { opacity: '0' },
+              to: { opacity: '1' }
             },
-            keyframes: {
-              fadeIn: { from: { opacity: '0' }, to: { opacity: '1' } },
-              bounceShort: { '0%, 100%': { transform: 'translateY(0)' }, '50%': { transform: 'translateY(-5px)' } }
+            bounceShort: {
+              '0%, 100%': { transform: 'translateY(0)' },
+              '50%': { transform: 'translateY(-5px)' }
             }
           }
         }
-      };
-    </script>
-    <link rel="stylesheet" href="./styles.css">
-    <script src="https://unpkg.com/lucide@latest"></script>
-    <script src="./app.js" defer></script>
-    <script src="./consent-forms.js" defer></script>
-    <script src="./cookie-consent.js" defer></script>
-  </head>
-  <body class="min-h-screen bg-slate-50 font-sans text-slate-800 antialiased selection:bg-emerald-500 selection:text-white">
-    <div id="app"></div>
-  </body>
+      }
+    };
+  </script>
+  <link rel="stylesheet" href="./styles.css">
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="./app.js" defer></script>
+  <script src="./consent-forms.js" defer></script>
+  <script src="./cookie-consent.js" defer></script>
+</head>
+
+<body class="min-h-screen bg-slate-50 font-sans text-slate-800 antialiased selection:bg-emerald-500 selection:text-white">
+
+  <!-- ==================== HEADER ==================== -->
+  <header id="site-header" class="fixed inset-x-0 top-0 z-40 border-b border-amber-400/40 bg-white/90 shadow-[0_4px_20px_rgba(217,119,6,0.08)] backdrop-blur-md transition-all duration-300">
+    <div class="mx-auto max-w-7xl px-4 py-3 sm:px-6 sm:py-4 lg:px-8">
+      <div class="flex items-center justify-between gap-4">
+        <a href="./index.html" class="group flex items-center gap-3 text-left" aria-label="Avighna Financial Services home">
+          <img src="./src/assets/images/logo.jpeg" alt="Avighna Financial Services logo" class="h-14 w-14 rounded-xl border border-amber-400/40 bg-white object-contain p-0.5 shadow-sm shadow-amber-500/20 sm:h-16 sm:w-16">
+          <span>
+            <span class="flex items-center gap-1.5 text-xl font-black tracking-tight text-slate-900 group-hover:text-emerald-600 sm:text-2xl">AVIGHNA <i class="h-2 w-2 animate-pulse rounded-full bg-amber-500"></i></span>
+            <span class="block text-[10px] font-semibold uppercase tracking-widest text-slate-500 sm:text-xs">Financial Services • Pune</span>
+          </span>
+        </a>
+
+        <!-- Desktop Navigation -->
+        <nav class="hidden items-center gap-1 rounded-full border border-slate-200 bg-slate-100/90 p-1.5 shadow-inner lg:flex" aria-label="Main navigation">
+          <a href="./index.html" class="nav-link relative rounded-full border border-emerald-200/60 bg-white px-4 py-2 text-sm font-semibold text-emerald-800 shadow-sm">Home <span class="nav-indicator absolute -bottom-1 left-1/2 h-0.5 w-2 -translate-x-1/2 rounded-full bg-emerald-600"></span></a>
+          <a href="./services.html" class="nav-link relative rounded-full px-4 py-2 text-sm font-semibold text-slate-600 transition-all hover:bg-slate-200/60 hover:text-slate-900">Services</a>
+          <a href="./calculators.html" class="nav-link relative rounded-full px-4 py-2 text-sm font-semibold text-slate-600 transition-all hover:bg-slate-200/60 hover:text-slate-900">Calculators</a>
+          <a href="./why-us.html" class="nav-link relative rounded-full px-4 py-2 text-sm font-semibold text-slate-600 transition-all hover:bg-slate-200/60 hover:text-slate-900">Why Avighna</a>
+          <a href="./contact.html" class="nav-link relative rounded-full px-4 py-2 text-sm font-semibold text-slate-600 transition-all hover:bg-slate-200/60 hover:text-slate-900">Contact &amp; Advisory</a>
+        </nav>
+
+        <!-- Action Buttons -->
+        <div class="hidden items-center gap-3 md:flex">
+          <button type="button" data-action="portal" class="flex items-center gap-1.5 rounded-xl border border-slate-300 bg-white px-3.5 py-2 text-xs font-semibold text-slate-700 shadow-sm transition hover:border-slate-400 hover:bg-slate-50 lg:text-sm">
+            <i data-lucide="user-round-check" class="h-4 w-4 text-blue-600"></i> Client Portal
+          </button>
+          <button type="button" data-action="checkup" class="flex items-center gap-2 rounded-xl bg-gradient-to-r from-emerald-600 via-teal-600 to-emerald-700 px-4 py-2.5 text-xs font-bold text-white shadow-md shadow-emerald-600/25 transition hover:scale-[1.02] hover:shadow-lg lg:px-5 lg:text-sm">
+            <i data-lucide="sparkles" class="h-4 w-4 animate-spin-slow text-amber-300"></i> Free Financial Checkup
+          </button>
+        </div>
+
+        <!-- Mobile Controls -->
+        <div class="flex items-center gap-2 md:hidden">
+          <button type="button" data-action="checkup" class="rounded-lg bg-emerald-600 px-3 py-1.5 text-xs font-bold text-white shadow-sm">Checkup</button>
+          <button id="mobile-menu-button" type="button" class="rounded-xl border border-amber-400/40 p-2 text-slate-700 transition hover:bg-amber-50" aria-label="Toggle navigation" aria-expanded="false">
+            <i data-lucide="menu" class="h-6 w-6"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile Navigation Drawer -->
+      <div id="mobile-drawer" class="mobile-drawer md:hidden">
+        <nav class="space-y-1 pt-4" aria-label="Mobile navigation">
+          <a href="./index.html" class="mobile-nav-link flex w-full items-center justify-between rounded-xl border border-emerald-200 bg-emerald-50 px-4 py-3 text-left text-base font-bold text-emerald-800">Home <i data-lucide="chevron-right" class="h-4 w-4 text-slate-400"></i></a>
+          <a href="./services.html" class="mobile-nav-link flex w-full items-center justify-between rounded-xl px-4 py-3 text-left text-base font-semibold text-slate-700 transition hover:bg-slate-100">Services <i data-lucide="chevron-right" class="h-4 w-4 text-slate-400"></i></a>
+          <a href="./calculators.html" class="mobile-nav-link flex w-full items-center justify-between rounded-xl px-4 py-3 text-left text-base font-semibold text-slate-700 transition hover:bg-slate-100">Calculators <i data-lucide="chevron-right" class="h-4 w-4 text-slate-400"></i></a>
+          <a href="./why-us.html" class="mobile-nav-link flex w-full items-center justify-between rounded-xl px-4 py-3 text-left text-base font-semibold text-slate-700 transition hover:bg-slate-100">Why Avighna <i data-lucide="chevron-right" class="h-4 w-4 text-slate-400"></i></a>
+          <a href="./contact.html" class="mobile-nav-link flex w-full items-center justify-between rounded-xl px-4 py-3 text-left text-base font-semibold text-slate-700 transition hover:bg-slate-100">Contact &amp; Advisory <i data-lucide="chevron-right" class="h-4 w-4 text-slate-400"></i></a>
+        </nav>
+        <div class="mt-3 flex flex-col gap-2.5 border-t border-amber-400/40 py-4">
+          <button type="button" data-action="portal" class="flex items-center justify-center gap-2 rounded-xl border border-slate-300 bg-white px-4 py-2.5 text-sm font-semibold text-slate-700">
+            <i data-lucide="user-round-check" class="h-4 w-4 text-blue-600"></i> Access Client Portal
+          </button>
+          <button type="button" data-action="checkup" class="flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-emerald-600 to-teal-600 px-4 py-3 text-sm font-bold text-white shadow-md">
+            <i data-lucide="sparkles" class="h-4 w-4 text-amber-300"></i> Get Free Financial Checkup
+          </button>
+          <p class="flex items-center justify-center gap-2 pt-1 text-center text-xs text-slate-500">
+            <i data-lucide="shield-check" class="h-3.5 w-3.5 text-emerald-600"></i> AMFI Registered &amp; Verified Pune Advisory
+          </p>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==================== MAIN CONTENT ==================== -->
+  <main class="flex-grow">
+    
+    <!-- Hero Section -->
+    <section class="page-section space-y-24 pb-20 sm:space-y-32">
+      <div class="relative overflow-hidden border-b border-slate-200/80 bg-gradient-to-b from-blue-50/70 via-white to-emerald-50/30 pt-32 pb-16 sm:pt-40 lg:pb-24">
+        <div class="pointer-events-none absolute left-1/2 top-1/4 h-[450px] w-[650px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-blue-100/50 blur-[120px]"></div>
+        <div class="pointer-events-none absolute right-10 top-1/3 h-[300px] w-[380px] rounded-full bg-emerald-100/50 blur-[100px]"></div>
+        <div class="relative z-10 mx-auto grid max-w-7xl grid-cols-1 items-center gap-12 px-4 sm:px-6 lg:grid-cols-12 lg:gap-8 lg:px-8">
+          
+          <div class="space-y-6 lg:col-span-7">
+            <span class="inline-flex items-center gap-2 rounded-full border border-blue-200 bg-white px-3.5 py-1.5 text-xs font-bold text-blue-800 shadow-sm">
+              <i class="h-2 w-2 animate-ping rounded-full bg-emerald-500"></i> AMFI Registered &amp; Pune’s Top-Rated Advisory Desk
+            </span>
+            <h1 class="text-4xl font-black leading-[1.14] tracking-tight text-slate-900 sm:text-5xl lg:text-6xl">
+              Build Your Wealth,<br>
+              <span class="bg-gradient-to-r from-emerald-600 via-teal-600 to-blue-600 bg-clip-text text-transparent">Secure Your Future</span> — Simply.
+            </h1>
+            <p class="max-w-2xl text-base leading-relaxed text-slate-600 sm:text-lg">
+              Comprehensive solutions across Home/Business Loans, Mutual Funds, SIPs, Insurance, and Property Advisory. Designed around your real life, not a product pitch.
+            </p>
+            <div class="flex flex-col gap-4 pt-2 sm:flex-row sm:items-center">
+              <button type="button" data-action="checkup" class="flex items-center justify-center gap-3 rounded-xl bg-gradient-to-r from-emerald-600 via-teal-600 to-emerald-700 px-7 py-4 text-base font-bold text-white shadow-md shadow-emerald-600/25 transition hover:scale-[1.02]">
+                <i data-lucide="sparkles" class="h-5 w-5 text-amber-300"></i> Start Free Financial Checkup <i data-lucide="arrow-right" class="h-5 w-5"></i>
+              </button>
+              <a href="./services.html" class="flex items-center justify-center gap-2 rounded-xl border-2 border-blue-600 bg-white px-6 py-4 text-base font-bold text-blue-700 transition hover:bg-blue-50/70">
+                Explore Services <i data-lucide="arrow-up-right" class="h-4 w-4 text-blue-600"></i>
+              </a>
+            </div>
+            <div class="grid grid-cols-3 gap-4 border-t border-slate-200 pt-6">
+              <div><b class="text-xl font-black text-slate-900 sm:text-2xl">₹500 Cr+</b><p class="text-xs font-medium text-slate-500">Assets Facilitated</p></div>
+              <div><b class="text-xl font-black text-emerald-600 sm:text-2xl">99.2%</b><p class="text-xs font-medium text-slate-500">Loan Approval Rate</p></div>
+              <div><b class="text-xl font-black text-blue-700 sm:text-2xl">10,000+</b><p class="text-xs font-medium text-slate-500">Happy Families</p></div>
+            </div>
+          </div>
+
+          <!-- Hero Right Snapshot Card -->
+          <div class="relative lg:col-span-5">
+            <div class="glass-panel-light relative z-10 mx-auto max-w-md space-y-5 rounded-3xl bg-white/95 p-6 shadow-xl sm:p-7 lg:max-w-none">
+              <div class="flex items-center justify-between border-b border-slate-200 pb-4">
+                <div class="flex items-center gap-3">
+                  <span class="flex h-10 w-10 items-center justify-center rounded-xl bg-emerald-100 text-emerald-700">
+                    <i data-lucide="trending-up" class="h-5 w-5"></i>
+                  </span>
+                  <div>
+                    <h3 class="text-sm font-bold text-slate-900">Avighna Fiduciary Index</h3>
+                    <p class="text-[11px] text-slate-500">Live Client Performance Snapshot</p>
+                  </div>
+                </div>
+                <span class="rounded-full border border-emerald-200 bg-emerald-100 px-2.5 py-1 text-[11px] font-bold text-emerald-800">● Active</span>
+              </div>
+              <div class="grid grid-cols-2 gap-3">
+                <div class="rounded-2xl border border-slate-200 bg-slate-50 p-3.5">
+                  <span class="text-[11px] font-semibold uppercase tracking-wider text-slate-500">Home Loan Desk</span>
+                  <p class="mt-1 text-lg font-black text-emerald-600">From 8.35%</p>
+                  <small class="text-[10px] text-slate-500">SBI • HDFC • ICICI</small>
+                </div>
+                <div class="rounded-2xl border border-slate-200 bg-slate-50 p-3.5">
+                  <span class="text-[11px] font-semibold uppercase tracking-wider text-slate-500">SIP Growth XIRR</span>
+                  <p class="mt-1 text-lg font-black text-blue-600">14.6% Avg</p>
+                  <small class="text-[10px] text-slate-500">10-Yr Equity Blend</small>
+                </div>
+              </div>
+              <div class="space-y-2 rounded-2xl border border-emerald-100 bg-emerald-50/60 p-4">
+                <div class="flex justify-between text-xs">
+                  <b class="text-slate-700">Fiduciary Transparency</b>
+                  <b class="text-emerald-700">100% Roadmap</b>
+                </div>
+                <div class="h-2.5 w-full overflow-hidden rounded-full bg-emerald-200/60">
+                  <div class="h-full w-full rounded-full bg-gradient-to-r from-emerald-500 to-teal-500"></div>
+                </div>
+                <div class="flex justify-between text-[10px] text-slate-500">
+                  <span>Zero Hidden Trailing Broker Fees</span>
+                  <b class="text-emerald-700">AMFI Certified</b>
+                </div>
+              </div>
+              <div class="flex items-center justify-between pt-1 text-xs text-slate-600">
+                <span class="flex items-center gap-1.5 font-medium">
+                  <i data-lucide="shield-check" class="h-4 w-4 text-emerald-600"></i> 30+ Bank &amp; AMC Partners
+                </span>
+                <span class="flex items-center gap-1 font-bold text-amber-500">
+                  <i data-lucide="star" class="h-3.5 w-3.5 fill-amber-400 text-amber-400"></i> <b class="text-slate-800">4.9 / 5 Rating</b>
+                </span>
+              </div>
+            </div>
+            <div class="absolute -right-3 -top-5 z-20 flex animate-bounce-short items-center gap-2.5 rounded-2xl border border-slate-200 bg-white p-3.5 shadow-lg sm:-right-6">
+              <i data-lucide="award" class="h-8 w-8 rounded-lg bg-emerald-100 p-1.5 text-emerald-700"></i>
+              <span><b class="block text-xs text-slate-900">0 Hidden Fees</b><small class="text-[10px] text-slate-500">Pure Fiduciary Model</small></span>
+            </div>
+            <div class="absolute -bottom-5 -left-3 z-20 flex items-center gap-2.5 rounded-2xl border border-slate-200 bg-white p-3.5 shadow-lg sm:-left-6">
+              <i data-lucide="circle-check" class="h-8 w-8 rounded-lg bg-blue-100 p-1.5 text-blue-700"></i>
+              <span><b class="block text-xs text-slate-900">₹500 Cr+ Facilitated</b><small class="text-[10px] text-slate-500">Pune &amp; Maharashtra</small></span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Quick Estimator Section -->
+      <section class="page-container">
+        <div class="relative overflow-hidden rounded-3xl border border-slate-200 bg-white p-6 shadow-xl sm:p-10">
+          <div class="flex flex-col justify-between gap-6 border-b border-slate-200 pb-8 lg:flex-row lg:items-center">
+            <div>
+              <span class="mb-2 inline-flex items-center gap-1.5 rounded-full border border-amber-200 bg-amber-50 px-3 py-1 text-xs font-bold text-amber-800">
+                <i data-lucide="calculator" class="h-3.5 w-3.5 text-amber-600"></i> Instant Estimator
+              </span>
+              <h2 class="text-2xl font-black text-slate-900 sm:text-3xl">Simulate Your Wealth &amp; Loan Numbers</h2>
+              <p class="mt-1 text-sm text-slate-500">Toggle between SIP growth and Home Loan EMI calculators for real-time projections.</p>
+            </div>
+            <div class="flex items-center rounded-2xl border border-slate-200 bg-slate-100 p-1.5">
+              <button type="button" data-home-tab="sip" class="home-calc-tab rounded-xl bg-emerald-600 px-4 py-2.5 text-xs font-bold text-white shadow-sm sm:px-5 sm:text-sm">
+                <i data-lucide="trending-up" class="inline-block h-4 w-4"></i> SIP Wealth Estimator
+              </button>
+              <button type="button" data-home-tab="emi" class="home-calc-tab rounded-xl px-4 py-2.5 text-xs font-bold text-slate-600 transition hover:text-slate-900 sm:px-5 sm:text-sm">
+                <i data-lucide="building-2" class="inline-block h-4 w-4"></i> Loan EMI Calculator
+              </button>
+            </div>
+          </div>
+
+          <!-- Home SIP Panel -->
+          <div id="home-sip" class="grid grid-cols-1 items-center gap-8 pt-8 lg:grid-cols-12">
+            <div class="space-y-6 lg:col-span-7">
+              <div class="range-field">
+                <div class="mb-2 flex items-center justify-between gap-3">
+                  <label for="quick-sip-amount" class="text-xs font-bold text-slate-700 sm:text-sm">Monthly Investment Amount</label>
+                  <output id="quick-sip-amount-value" class="shrink-0 font-mono text-base font-black text-emerald-600 sm:text-lg">₹15,000</output>
+                </div>
+                <input id="quick-sip-amount" type="range" min="1000" max="200000" step="1000" value="15000" aria-label="Monthly Investment Amount">
+                <div class="mt-1 flex justify-between gap-2 text-[10px] text-slate-400 sm:text-[11px]">
+                  <span>₹1,000 / mo</span><span>₹50,000</span><span>₹1,00,000</span><span>₹2,00,000 / mo</span>
+                </div>
+              </div>
+              <div class="range-field">
+                <div class="mb-2 flex items-center justify-between gap-3">
+                  <label for="quick-sip-years" class="text-xs font-bold text-slate-700 sm:text-sm">Investment Horizon</label>
+                  <output id="quick-sip-years-value" class="shrink-0 font-mono text-base font-black text-slate-600 sm:text-lg">15 Years</output>
+                </div>
+                <input id="quick-sip-years" type="range" min="1" max="30" step="1" value="15" aria-label="Investment Horizon">
+                <div class="mt-1 flex justify-between gap-2 text-[10px] text-slate-400 sm:text-[11px]">
+                  <span>1 Year</span><span>10 Years</span><span>20 Years</span><span>30 Years</span>
+                </div>
+              </div>
+              <p class="text-xs text-slate-500">*Based on benchmark diversified equity CAGR expectation of 13.5% p.a.</p>
+            </div>
+
+            <div class="space-y-4 rounded-2xl border border-slate-200 bg-slate-50 p-6 lg:col-span-5">
+              <div class="border-b border-slate-200 pb-4 text-center">
+                <p class="text-xs font-semibold uppercase tracking-wider text-slate-500">Total Expected Corpus</p>
+                <p id="quick-sip-corpus" class="mt-1 font-mono text-3xl font-black text-emerald-600 sm:text-4xl"></p>
+                <p id="quick-sip-exact" class="mt-0.5 text-xs text-slate-500"></p>
+              </div>
+              <div class="space-y-2.5 text-xs sm:text-sm">
+                <p class="flex justify-between"><span class="text-slate-500">Total Invested Amount:</span><b id="quick-sip-invested" class="font-mono text-slate-800"></b></p>
+                <p class="flex justify-between"><span class="text-slate-500">Estimated Wealth Gain:</span><b id="quick-sip-gain" class="font-mono text-emerald-600"></b></p>
+              </div>
+              <div>
+                <div class="flex h-3 overflow-hidden rounded-full bg-slate-200">
+                  <div id="quick-sip-principal-bar" class="bg-blue-500 transition-all duration-300"></div>
+                  <div id="quick-sip-return-bar" class="bg-emerald-500 transition-all duration-300"></div>
+                </div>
+                <div class="mt-1 flex justify-between text-[11px] text-slate-500">
+                  <span>🔵 Principal</span><span>🟢 Compounded Growth</span>
+                </div>
+              </div>
+              <a href="./calculators.html" class="flex w-full items-center justify-center gap-2 rounded-xl bg-emerald-600 px-4 py-2.5 text-xs font-bold text-white shadow-sm transition hover:bg-emerald-700 sm:text-sm">
+                Open Full Calculator Suite (All 4 Tools) <i data-lucide="arrow-right" class="h-4 w-4"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Home EMI Panel -->
+          <div id="home-emi" hidden class="grid grid-cols-1 items-center gap-8 pt-8 lg:grid-cols-12">
+            <div class="space-y-6 lg:col-span-7">
+              <div class="range-field">
+                <div class="mb-2 flex items-center justify-between gap-3">
+                  <label for="quick-loan-amount" class="text-xs font-bold text-slate-700 sm:text-sm">Loan Amount Required</label>
+                  <output id="quick-loan-amount-value" class="shrink-0 font-mono text-base font-black text-blue-600 sm:text-lg">₹50,00,000</output>
+                </div>
+                <input id="quick-loan-amount" type="range" min="500000" max="30000000" step="250000" value="5000000" aria-label="Loan Amount Required">
+                <div class="mt-1 flex justify-between gap-2 text-[10px] text-slate-400 sm:text-[11px]">
+                  <span>₹5 Lakhs</span><span>₹1 Crore</span><span>₹2 Crores</span><span>₹3 Crores</span>
+                </div>
+              </div>
+              <div class="range-field">
+                <div class="mb-2 flex items-center justify-between gap-3">
+                  <label for="quick-loan-rate" class="text-xs font-bold text-slate-700 sm:text-sm">Interest Rate (p.a.)</label>
+                  <output id="quick-loan-rate-value" class="shrink-0 font-mono text-base font-black text-emerald-600 sm:text-lg">8.4% p.a.</output>
+                </div>
+                <input id="quick-loan-rate" type="range" min="8" max="14" step="0.1" value="8.4" aria-label="Interest Rate">
+                <div class="mt-1 flex justify-between gap-2 text-[10px] text-slate-400 sm:text-[11px]">
+                  <span>8.0% Home</span><span>9.5% LAP</span><span>12.0% Business</span><span>14.0%</span>
+                </div>
+              </div>
+              <div class="range-field">
+                <div class="mb-2 flex items-center justify-between gap-3">
+                  <label for="quick-loan-years" class="text-xs font-bold text-slate-700 sm:text-sm">Loan Tenure</label>
+                  <output id="quick-loan-years-value" class="shrink-0 font-mono text-base font-black text-slate-600 sm:text-lg">20 Years</output>
+                </div>
+                <input id="quick-loan-years" type="range" min="1" max="30" step="1" value="20" aria-label="Loan Tenure">
+                <div class="mt-1 flex justify-between gap-2 text-[10px] text-slate-400 sm:text-[11px]">
+                  <span>1 Year</span><span>10 Years</span><span>20 Years</span><span>30 Years</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="space-y-4 rounded-2xl border border-slate-200 bg-slate-50 p-6 lg:col-span-5">
+              <div class="border-b border-slate-200 pb-4 text-center">
+                <p class="text-xs font-semibold uppercase tracking-wider text-slate-500">Monthly Equated Installment (EMI)</p>
+                <p id="quick-emi-value" class="mt-1 font-mono text-3xl font-black text-blue-700 sm:text-4xl"></p>
+              </div>
+              <div class="space-y-2.5 text-xs sm:text-sm">
+                <p class="flex justify-between"><span class="text-slate-500">Principal Loan:</span><b id="quick-emi-principal" class="font-mono"></b></p>
+                <p class="flex justify-between"><span class="text-slate-500">Total Interest Payable:</span><b id="quick-emi-interest" class="font-mono text-amber-600"></b></p>
+                <p class="flex justify-between border-t border-slate-200 pt-2"><span class="font-bold text-slate-700">Total Amount Payable:</span><b id="quick-emi-total" class="font-mono font-black text-slate-900"></b></p>
+              </div>
+              <button type="button" data-action="checkup" data-goal="Home Loan" class="flex w-full items-center justify-center gap-2 rounded-xl bg-blue-600 px-4 py-2.5 text-xs font-bold text-white shadow-sm transition hover:bg-blue-700 sm:text-sm">
+                Check Sanction Eligibility (Free) <i data-lucide="arrow-right" class="h-4 w-4"></i>
+              </button>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Four Core Pillars -->
+      <section class="page-container">
+        <div class="mx-auto mb-12 max-w-3xl space-y-3 text-center">
+          <span class="rounded-full border border-emerald-200 bg-emerald-50 px-3 py-1 text-xs font-bold uppercase tracking-wider text-emerald-800">Full-Spectrum Fiduciary Architecture</span>
+          <h2 class="text-3xl font-black text-slate-900 sm:text-4xl">Four Core Pillars. One Trusted Pune Partner.</h2>
+          <p class="text-sm text-slate-600 sm:text-base">Whether securing credit, compounding savings, guarding family longevity, or investing in Pune real estate, we handle every detail.</p>
+        </div>
+
+        <div class="grid grid-cols-1 gap-6 md:grid-cols-2 sm:gap-8">
+          
+          <!-- Pillar 1 -->
+          <article class="group flex flex-col justify-between rounded-3xl border border-slate-200 bg-white p-7 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-emerald-400 hover:shadow-xl">
+            <div>
+              <div class="mb-4 flex items-center justify-between">
+                <span class="flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-to-br from-emerald-500 to-blue-600 text-white shadow-md">
+                  <i data-lucide="building-2" class="h-6 w-6"></i>
+                </span>
+                <span class="rounded-full border border-amber-200 bg-amber-50 px-2.5 py-1 text-xs font-bold text-amber-800">Competitive Rates from 8.35%</span>
+              </div>
+              <h3 class="text-xl font-black text-slate-900 transition-colors group-hover:text-emerald-700 sm:text-2xl">Loans &amp; Mortgages</h3>
+              <p class="mt-1 text-xs font-bold text-emerald-700">Lowest Interest Rates &amp; Swift Sanctions Across 30+ Banks</p>
+              <p class="mt-3 text-sm leading-relaxed text-slate-600">Customized credit architecture for home buyers, expanding enterprises, and high-net-worth property owners.</p>
+              <ul class="mt-5 space-y-2.5 text-xs text-slate-600">
+                <li class="flex items-center gap-2"><i data-lucide="circle-check" class="h-4 w-4 shrink-0 text-emerald-600"></i><span><b class="text-slate-800">Home Loans &amp; Balance Transfer</b> — 8.35% - 9.15% p.a.</span></li>
+                <li class="flex items-center gap-2"><i data-lucide="circle-check" class="h-4 w-4 shrink-0 text-emerald-600"></i><span><b class="text-slate-800">Business Growth Capital &amp; MSME</b> — 10.50% - 15.00% p.a.</span></li>
+                <li class="flex items-center gap-2"><i data-lucide="circle-check" class="h-4 w-4 shrink-0 text-emerald-600"></i><span><b class="text-slate-800">Loan Against Property (LAP)</b> — 8.85% - 10.25% p.a.</span></li>
+              </ul>
+            </div>
+            <div class="mt-6 flex items-center justify-between border-t border-slate-100 pt-6">
+              <a href="./services.html" class="flex items-center gap-1.5 text-xs font-bold text-blue-700 transition hover:text-emerald-700 sm:text-sm">
+                View Detailed Vertical <i data-lucide="chevron-right" class="h-4 w-4"></i>
+              </a>
+              <button type="button" data-action="checkup" data-goal="Home Loan" class="rounded-xl border border-slate-200 bg-slate-100 px-3.5 py-1.5 text-xs font-bold text-slate-700 transition hover:border-emerald-600 hover:bg-emerald-600 hover:text-white">Book Consultation</button>
+            </div>
+          </article>
+
+          <!-- Pillar 2 -->
+          <article class="group flex flex-col justify-between rounded-3xl border border-slate-200 bg-white p-7 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-emerald-400 hover:shadow-xl">
+            <div>
+              <div class="mb-4 flex items-center justify-between">
+                <span class="flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-to-br from-emerald-500 to-blue-600 text-white shadow-md">
+                  <i data-lucide="trending-up" class="h-6 w-6"></i>
+                </span>
+                <span class="rounded-full border border-amber-200 bg-amber-50 px-2.5 py-1 text-xs font-bold text-amber-800">AMFI Registered &amp; Goal-Engineered</span>
+              </div>
+              <h3 class="text-xl font-black text-slate-900 transition-colors group-hover:text-emerald-700 sm:text-2xl">Wealth &amp; Investments</h3>
+              <p class="mt-1 text-xs font-bold text-emerald-700">Disciplined Capital Compounding Designed for Real-Life Milestones</p>
+              <p class="mt-3 text-sm leading-relaxed text-slate-600">Evidence-based portfolio construction blending Direct Mutual Funds, Equity SIPs, Index Strategies, and Tax-Saving ELSS.</p>
+              <ul class="mt-5 space-y-2.5 text-xs text-slate-600">
+                <li class="flex items-center gap-2"><i data-lucide="circle-check" class="h-4 w-4 shrink-0 text-emerald-600"></i><span><b class="text-slate-800">Systematic Investment Plans (SIP)</b> — Targeting 12% - 15% CAGR (Equity)</span></li>
+                <li class="flex items-center gap-2"><i data-lucide="circle-check" class="h-4 w-4 shrink-0 text-emerald-600"></i><span><b class="text-slate-800">Lumpsum Portfolio &amp; Tactical Allocation</b> — Targeted Alpha over Nifty 50</span></li>
+                <li class="flex items-center gap-2"><i data-lucide="circle-check" class="h-4 w-4 shrink-0 text-emerald-600"></i><span><b class="text-slate-800">Tax-Saving ELSS &amp; Section 80C</b> — 3 Year Lock-in</span></li>
+              </ul>
+            </div>
+            <div class="mt-6 flex items-center justify-between border-t border-slate-100 pt-6">
+              <a href="./services.html" class="flex items-center gap-1.5 text-xs font-bold text-blue-700 transition hover:text-emerald-700 sm:text-sm">
+                View Detailed Vertical <i data-lucide="chevron-right" class="h-4 w-4"></i>
+              </a>
+              <button type="button" data-action="checkup" data-goal="Wealth Creation" class="rounded-xl border border-slate-200 bg-slate-100 px-3.5 py-1.5 text-xs font-bold text-slate-700 transition hover:border-emerald-600 hover:bg-emerald-600 hover:text-white">Book Consultation</button>
+            </div>
+          </article>
+
+          <!-- Pillar 3 -->
+          <article class="group flex flex-col justify-between rounded-3xl border border-slate-200 bg-white p-7 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-emerald-400 hover:shadow-xl">
+            <div>
+              <div class="mb-4 flex items-center justify-between">
+                <span class="flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-to-br from-emerald-500 to-blue-600 text-white shadow-md">
+                  <i data-lucide="shield-check" class="h-6 w-6"></i>
+                </span>
+                <span class="rounded-full border border-amber-200 bg-amber-50 px-2.5 py-1 text-xs font-bold text-amber-800">100% Claim Settlement Assistance</span>
+              </div>
+              <h3 class="text-xl font-black text-slate-900 transition-colors group-hover:text-emerald-700 sm:text-2xl">Risk &amp; Insurance Advisory</h3>
+              <p class="mt-1 text-xs font-bold text-emerald-700">Fortifying Your Family and Enterprise Against Financial Shocks</p>
+              <p class="mt-3 text-sm leading-relaxed text-slate-600">Pure protection term life, high-restoration family health covers, and critical illness guards with a client-first approach.</p>
+              <ul class="mt-5 space-y-2.5 text-xs text-slate-600">
+                <li class="flex items-center gap-2"><i data-lucide="circle-check" class="h-4 w-4 shrink-0 text-emerald-600"></i><span><b class="text-slate-800">Pure Term Life Insurance (High Cover)</b> — From ~₹600/month for ₹1 Cr</span></li>
+                <li class="flex items-center gap-2"><i data-lucide="circle-check" class="h-4 w-4 shrink-0 text-emerald-600"></i><span><b class="text-slate-800">Family Health Cover &amp; Super Top-Up</b> — Tax rebate under Sec 80D</span></li>
+                <li class="flex items-center gap-2"><i data-lucide="circle-check" class="h-4 w-4 shrink-0 text-emerald-600"></i><span><b class="text-slate-800">Director &amp; Officer / Keyman Insurance</b> — Corporate expense deductible</span></li>
+              </ul>
+            </div>
+            <div class="mt-6 flex items-center justify-between border-t border-slate-100 pt-6">
+              <a href="./services.html" class="flex items-center gap-1.5 text-xs font-bold text-blue-700 transition hover:text-emerald-700 sm:text-sm">
+                View Detailed Vertical <i data-lucide="chevron-right" class="h-4 w-4"></i>
+              </a>
+              <button type="button" data-action="checkup" data-goal="Term Insurance" class="rounded-xl border border-slate-200 bg-slate-100 px-3.5 py-1.5 text-xs font-bold text-slate-700 transition hover:border-emerald-600 hover:bg-emerald-600 hover:text-white">Book Consultation</button>
+            </div>
+          </article>
+
+          <!-- Pillar 4 -->
+          <article class="group flex flex-col justify-between rounded-3xl border border-slate-200 bg-white p-7 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-emerald-400 hover:shadow-xl">
+            <div>
+              <div class="mb-4 flex items-center justify-between">
+                <span class="flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-to-br from-emerald-500 to-blue-600 text-white shadow-md">
+                  <i data-lucide="compass" class="h-6 w-6"></i>
+                </span>
+                <span class="rounded-full border border-amber-200 bg-amber-50 px-2.5 py-1 text-xs font-bold text-amber-800">Pune Prime Corridors</span>
+              </div>
+              <h3 class="text-xl font-black text-slate-900 transition-colors group-hover:text-emerald-700 sm:text-2xl">Real Estate &amp; Property Advisory</h3>
+              <p class="mt-1 text-xs font-bold text-emerald-700">Strategic Property Acquisition, Title Verification &amp; Structured Financing</p>
+              <p class="mt-3 text-sm leading-relaxed text-slate-600">Real estate due diligence and seamless financing across Baner, Hinjewadi, Kharadi, Kothrud, and Wakad.</p>
+              <ul class="mt-5 space-y-2.5 text-xs text-slate-600">
+                <li class="flex items-center gap-2"><i data-lucide="circle-check" class="h-4 w-4 shrink-0 text-emerald-600"></i><span><b class="text-slate-800">Residential &amp; Villa Buyer Advisory</b> — Combined with 8.35% Loan Desk</span></li>
+                <li class="flex items-center gap-2"><i data-lucide="circle-check" class="h-4 w-4 shrink-0 text-emerald-600"></i><span><b class="text-slate-800">Pre-Leased Commercial &amp; Retail Assets</b> — 7.5% - 9.2% Net Rental Yields</span></li>
+                <li class="flex items-center gap-2"><i data-lucide="circle-check" class="h-4 w-4 shrink-0 text-emerald-600"></i><span><b class="text-slate-800">Property Equity Monetization</b> — Custom Structuring</span></li>
+              </ul>
+            </div>
+            <div class="mt-6 flex items-center justify-between border-t border-slate-100 pt-6">
+              <a href="./services.html" class="flex items-center gap-1.5 text-xs font-bold text-blue-700 transition hover:text-emerald-700 sm:text-sm">
+                View Detailed Vertical <i data-lucide="chevron-right" class="h-4 w-4"></i>
+              </a>
+              <button type="button" data-action="checkup" data-goal="Property Advisory" class="rounded-xl border border-slate-200 bg-slate-100 px-3.5 py-1.5 text-xs font-bold text-slate-700 transition hover:border-emerald-600 hover:bg-emerald-600 hover:text-white">Book Consultation</button>
+            </div>
+          </article>
+
+        </div>
+      </section>
+
+      <!-- Comparison Benchmark Section -->
+      <section class="page-container">
+        <div class="mx-auto mb-12 max-w-3xl space-y-3 text-center">
+          <span class="rounded-full border border-blue-200 bg-blue-50 px-3 py-1 text-xs font-bold uppercase tracking-wider text-blue-800">Transparent Benchmark</span>
+          <h2 class="text-3xl font-black text-slate-900 sm:text-4xl">Traditional Sales Agents vs. The Avighna Fiduciary Standard</h2>
+          <p class="text-sm text-slate-600 sm:text-base">See the structural difference between commission-driven sales and goal-aligned financial planning.</p>
+        </div>
+        <div class="overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-lg">
+          <div class="overflow-x-auto">
+            <table class="w-full border-collapse text-left">
+              <thead>
+                <tr class="border-b border-slate-200 bg-slate-50">
+                  <th class="p-4 text-xs font-bold uppercase tracking-wider text-slate-500 sm:p-5">Key Differentiator</th>
+                  <th class="p-4 text-xs font-bold uppercase tracking-wider text-slate-500 sm:p-5">Traditional Bank DSA / Agent</th>
+                  <th class="bg-emerald-50/60 p-4 text-xs font-bold uppercase tracking-wider text-emerald-800 sm:p-5">The Avighna Financial Way</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-slate-100 text-xs sm:text-sm">
+                <tr class="bg-slate-50/40">
+                  <td class="p-4 font-bold text-slate-900 sm:p-5">Advisory Orientation</td>
+                  <td class="p-4 text-slate-500 sm:p-5"><span class="flex items-start gap-2"><i data-lucide="x" class="mt-0.5 h-4 w-4 shrink-0 text-rose-500"></i> Product-seller pushing high-commission policies &amp; ULIPs</span></td>
+                  <td class="bg-emerald-50/20 p-4 font-bold text-slate-900 sm:p-5"><span class="flex items-start gap-2"><i data-lucide="check" class="mt-0.5 h-4 w-4 shrink-0 text-emerald-600"></i> Goal-centric fiduciary planning tailored to your life milestones</span></td>
+                </tr>
+                <tr class="bg-white">
+                  <td class="p-4 font-bold text-slate-900 sm:p-5">Bank &amp; AMC Choice</td>
+                  <td class="p-4 text-slate-500 sm:p-5"><span class="flex items-start gap-2"><i data-lucide="x" class="mt-0.5 h-4 w-4 shrink-0 text-rose-500"></i> Captive DSA tied to 1-2 institutions with quota pressure</span></td>
+                  <td class="bg-emerald-50/20 p-4 font-bold text-slate-900 sm:p-5"><span class="flex items-start gap-2"><i data-lucide="check" class="mt-0.5 h-4 w-4 shrink-0 text-emerald-600"></i> Open architecture across 30+ leading banks, NBFCs, and AMCs</span></td>
+                </tr>
+                <tr class="bg-slate-50/40">
+                  <td class="p-4 font-bold text-slate-900 sm:p-5">Hidden Fees &amp; Kickbacks</td>
+                  <td class="p-4 text-slate-500 sm:p-5"><span class="flex items-start gap-2"><i data-lucide="x" class="mt-0.5 h-4 w-4 shrink-0 text-rose-500"></i> Opaque trail commissions and processing charge inflations</span></td>
+                  <td class="bg-emerald-50/20 p-4 font-bold text-slate-900 sm:p-5"><span class="flex items-start gap-2"><i data-lucide="check" class="mt-0.5 h-4 w-4 shrink-0 text-emerald-600"></i> Transparent, zero undisclosed fees, detailed disclosure sheet</span></td>
+                </tr>
+                <tr class="bg-white">
+                  <td class="p-4 font-bold text-slate-900 sm:p-5">Post-Disbursal Support</td>
+                  <td class="p-4 text-slate-500 sm:p-5"><span class="flex items-start gap-2"><i data-lucide="x" class="mt-0.5 h-4 w-4 shrink-0 text-rose-500"></i> Vanishes once sanction or policy issuance is done</span></td>
+                  <td class="bg-emerald-50/20 p-4 font-bold text-slate-900 sm:p-5"><span class="flex items-start gap-2"><i data-lucide="check" class="mt-0.5 h-4 w-4 shrink-0 text-emerald-600"></i> Dedicated relationship manager, annual rebalancing, and claims desk</span></td>
+                </tr>
+                <tr class="bg-slate-50/40">
+                  <td class="p-4 font-bold text-slate-900 sm:p-5">Doorstep Execution in Pune</td>
+                  <td class="p-4 text-slate-500 sm:p-5"><span class="flex items-start gap-2"><i data-lucide="x" class="mt-0.5 h-4 w-4 shrink-0 text-rose-500"></i> Borrower forced to visit physical bank branches repeatedly</span></td>
+                  <td class="bg-emerald-50/20 p-4 font-bold text-slate-900 sm:p-5"><span class="flex items-start gap-2"><i data-lucide="check" class="mt-0.5 h-4 w-4 shrink-0 text-emerald-600"></i> Doorstep documentation pickup and legal vetting across Pune</span></td>
+                </tr>
+                <tr class="bg-white">
+                  <td class="p-4 font-bold text-slate-900 sm:p-5">Claim Settlement Assistance</td>
+                  <td class="p-4 text-slate-500 sm:p-5"><span class="flex items-start gap-2"><i data-lucide="x" class="mt-0.5 h-4 w-4 shrink-0 text-rose-500"></i> Leaves customer alone on a toll-free loop</span></td>
+                  <td class="bg-emerald-50/20 p-4 font-bold text-slate-900 sm:p-5"><span class="flex items-start gap-2"><i data-lucide="check" class="mt-0.5 h-4 w-4 shrink-0 text-emerald-600"></i> Personal advocate during hospital cashless or term claims</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- Trust Stats & Client Testimonials Section -->
+      <section class="page-container">
+        <div class="mb-16 grid grid-cols-2 gap-4 rounded-3xl border border-slate-200 bg-white p-6 shadow-sm sm:p-8 md:grid-cols-3 lg:grid-cols-6">
+          <div class="p-3 text-center">
+            <p class="bg-gradient-to-r from-emerald-600 to-blue-600 bg-clip-text text-2xl font-black text-transparent sm:text-3xl">₹500 Cr+</p>
+            <p class="mt-1 text-xs font-bold text-slate-800">Total Capital Facilitated</p>
+            <p class="mt-0.5 text-[10px] text-slate-500">Across Loans &amp; Wealth Portfolios</p>
+          </div>
+          <div class="p-3 text-center">
+            <p class="bg-gradient-to-r from-emerald-600 to-blue-600 bg-clip-text text-2xl font-black text-transparent sm:text-3xl">10,000+</p>
+            <p class="mt-1 text-xs font-bold text-slate-800">Delighted Pune Families</p>
+            <p class="mt-0.5 text-[10px] text-slate-500">Guided Towards Financial Peace</p>
+          </div>
+          <div class="p-3 text-center">
+            <p class="bg-gradient-to-r from-emerald-600 to-blue-600 bg-clip-text text-2xl font-black text-transparent sm:text-3xl">99.2%</p>
+            <p class="mt-1 text-xs font-bold text-slate-800">Loan Approval Success Rate</p>
+            <p class="mt-0.5 text-[10px] text-slate-500">Zero-Rejection Vetting Model</p>
+          </div>
+          <div class="p-3 text-center">
+            <p class="bg-gradient-to-r from-emerald-600 to-blue-600 bg-clip-text text-2xl font-black text-transparent sm:text-3xl">30+</p>
+            <p class="mt-1 text-xs font-bold text-slate-800">Institutional Partners</p>
+            <p class="mt-0.5 text-[10px] text-slate-500">Unbiased Product Architecture</p>
+          </div>
+          <div class="p-3 text-center">
+            <p class="bg-gradient-to-r from-emerald-600 to-blue-600 bg-clip-text text-2xl font-black text-transparent sm:text-3xl">15+ Years</p>
+            <p class="mt-1 text-xs font-bold text-slate-800">Pune Market Experience</p>
+            <p class="mt-0.5 text-[10px] text-slate-500">Seasoned CFPs &amp; Ex-Bankers</p>
+          </div>
+          <div class="p-3 text-center">
+            <p class="bg-gradient-to-r from-emerald-600 to-blue-600 bg-clip-text text-2xl font-black text-transparent sm:text-3xl">0 Hidden Fees</p>
+            <p class="mt-1 text-xs font-bold text-slate-800">Transparent Client Policy</p>
+            <p class="mt-0.5 text-[10px] text-slate-500">Zero Undisclosed Commissions</p>
+          </div>
+        </div>
+
+        <div class="space-y-8">
+          <div class="mx-auto max-w-2xl space-y-2 text-center">
+            <span class="rounded-full border border-emerald-200 bg-emerald-50 px-3 py-1 text-xs font-bold uppercase tracking-wider text-emerald-800">Verified Client Stories</span>
+            <h2 class="text-3xl font-black text-slate-900">Trusted by 10,000+ Pune Professionals &amp; Entrepreneurs</h2>
+            <p class="text-sm text-slate-500">Real families who transformed their liabilities into compounding wealth.</p>
+          </div>
+          <div class="grid grid-cols-1 gap-6 md:grid-cols-2">
+            
+            <article class="flex flex-col justify-between rounded-3xl border border-slate-200 bg-white p-6 transition hover:border-emerald-300 hover:shadow-lg sm:p-7">
+              <div class="space-y-4">
+                <div class="flex items-center justify-between">
+                  <div class="flex gap-1 text-amber-400">
+                    <i data-lucide="star" class="h-4 w-4 fill-amber-400 text-amber-400"></i>
+                    <i data-lucide="star" class="h-4 w-4 fill-amber-400 text-amber-400"></i>
+                    <i data-lucide="star" class="h-4 w-4 fill-amber-400 text-amber-400"></i>
+                    <i data-lucide="star" class="h-4 w-4 fill-amber-400 text-amber-400"></i>
+                    <i data-lucide="star" class="h-4 w-4 fill-amber-400 text-amber-400"></i>
+                  </div>
+                  <span class="rounded-full border border-emerald-200 bg-emerald-50 px-2.5 py-1 text-xs font-bold text-emerald-800">Saved ₹18.4L in Interest</span>
+                </div>
+                <p class="text-sm italic leading-relaxed text-slate-600">“Avighna saved us more than ₹18.4 Lakhs in cumulative interest by transferring our existing home loan. Their advisor also restructured our mutual fund investments into goal-aligned SIPs. The transparency was breathtaking.”</p>
+              </div>
+              <div class="mt-6 flex items-center gap-3 border-t border-slate-100 pt-6">
+                <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&amp;fit=crop&amp;w=200&amp;q=80" alt="" class="h-11 w-11 rounded-full border border-slate-200 object-cover">
+                <div>
+                  <h3 class="flex items-center gap-1.5 text-sm font-bold text-slate-900">Vikram &amp; Radhika Deshmukh <i data-lucide="badge-check" class="h-4 w-4 text-emerald-600"></i></h3>
+                  <p class="text-[11px] text-slate-500">Principal Architect &amp; Senior Director at Infosys</p>
+                  <p class="text-[10px] font-bold text-blue-700">Baner, Pune • Home Loan Balance Transfer + SIP Portfolio</p>
+                </div>
+              </div>
+            </article>
+
+            <article class="flex flex-col justify-between rounded-3xl border border-slate-200 bg-white p-6 transition hover:border-emerald-300 hover:shadow-lg sm:p-7">
+              <div class="space-y-4">
+                <div class="flex items-center justify-between">
+                  <div class="flex gap-1 text-amber-400">
+                    <i data-lucide="star" class="h-4 w-4 fill-amber-400 text-amber-400"></i>
+                    <i data-lucide="star" class="h-4 w-4 fill-amber-400 text-amber-400"></i>
+                    <i data-lucide="star" class="h-4 w-4 fill-amber-400 text-amber-400"></i>
+                    <i data-lucide="star" class="h-4 w-4 fill-amber-400 text-amber-400"></i>
+                    <i data-lucide="star" class="h-4 w-4 fill-amber-400 text-amber-400"></i>
+                  </div>
+                  <span class="rounded-full border border-emerald-200 bg-emerald-50 px-2.5 py-1 text-xs font-bold text-emerald-800">Disbursed in 72 Hours</span>
+                </div>
+                <p class="text-sm italic leading-relaxed text-slate-600">“When we needed machinery expansion capital, Avighna restructured our debt presentation and helped our CGTMSE-backed facility move in 72 hours. An indispensable partner for Pune MSMEs.”</p>
+              </div>
+              <div class="mt-6 flex items-center gap-3 border-t border-slate-100 pt-6">
+                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&amp;fit=crop&amp;w=200&amp;q=80" alt="" class="h-11 w-11 rounded-full border border-slate-200 object-cover">
+                <div>
+                  <h3 class="flex items-center gap-1.5 text-sm font-bold text-slate-900">Sanjay Kulkarni <i data-lucide="badge-check" class="h-4 w-4 text-emerald-600"></i></h3>
+                  <p class="text-[11px] text-slate-500">Founder &amp; Managing Director, Precision Tools Pvt Ltd</p>
+                  <p class="text-[10px] font-bold text-blue-700">Bhosari MIDC, Pune • Business Loan &amp; Working Capital Syndication</p>
+                </div>
+              </div>
+            </article>
+
+            <article class="flex flex-col justify-between rounded-3xl border border-slate-200 bg-white p-6 transition hover:border-emerald-300 hover:shadow-lg sm:p-7">
+              <div class="space-y-4">
+                <div class="flex items-center justify-between">
+                  <div class="flex gap-1 text-amber-400">
+                    <i data-lucide="star" class="h-4 w-4 fill-amber-400 text-amber-400"></i>
+                    <i data-lucide="star" class="h-4 w-4 fill-amber-400 text-amber-400"></i>
+                    <i data-lucide="star" class="h-4 w-4 fill-amber-400 text-amber-400"></i>
+                    <i data-lucide="star" class="h-4 w-4 fill-amber-400 text-amber-400"></i>
+                    <i data-lucide="star" class="h-4 w-4 fill-amber-400 text-amber-400"></i>
+                  </div>
+                  <span class="rounded-full border border-emerald-200 bg-emerald-50 px-2.5 py-1 text-xs font-bold text-emerald-800">Retirement Horizon: 52 Yrs</span>
+                </div>
+                <p class="text-sm italic leading-relaxed text-slate-600">“Avighna audited our insurance policies and designed an inflation-adjusted retirement roadmap. Their advice helped us make informed decisions despite our busy schedules.”</p>
+              </div>
+              <div class="mt-6 flex items-center gap-3 border-t border-slate-100 pt-6">
+                <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&amp;fit=crop&amp;w=200&amp;q=80" alt="" class="h-11 w-11 rounded-full border border-slate-200 object-cover">
+                <div>
+                  <h3 class="flex items-center gap-1.5 text-sm font-bold text-slate-900">Dr. Anjali &amp; Dr. Sameer Joshi <i data-lucide="badge-check" class="h-4 w-4 text-emerald-600"></i></h3>
+                  <p class="text-[11px] text-slate-500">Consultant Radiologist &amp; Chief Orthopedic Surgeon</p>
+                  <p class="text-[10px] font-bold text-blue-700">Kothrud, Pune • Retirement Blueprint &amp; Family Health Shield</p>
+                </div>
+              </div>
+            </article>
+
+            <article class="flex flex-col justify-between rounded-3xl border border-slate-200 bg-white p-6 transition hover:border-emerald-300 hover:shadow-lg sm:p-7">
+              <div class="space-y-4">
+                <div class="flex items-center justify-between">
+                  <div class="flex gap-1 text-amber-400">
+                    <i data-lucide="star" class="h-4 w-4 fill-amber-400 text-amber-400"></i>
+                    <i data-lucide="star" class="h-4 w-4 fill-amber-400 text-amber-400"></i>
+                    <i data-lucide="star" class="h-4 w-4 fill-amber-400 text-amber-400"></i>
+                    <i data-lucide="star" class="h-4 w-4 fill-amber-400 text-amber-400"></i>
+                    <i data-lucide="star" class="h-4 w-4 fill-amber-400 text-amber-400"></i>
+                  </div>
+                  <span class="rounded-full border border-emerald-200 bg-emerald-50 px-2.5 py-1 text-xs font-bold text-emerald-800">8.4% Net Rental Yield</span>
+                </div>
+                <p class="text-sm italic leading-relaxed text-slate-600">“Avighna guided me into a pre-leased retail property in Kharadi while securing a term cover. Their client-first commitment is rare in the Indian financial sector.”</p>
+              </div>
+              <div class="mt-6 flex items-center gap-3 border-t border-slate-100 pt-6">
+                <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&amp;fit=crop&amp;w=200&amp;q=80" alt="" class="h-11 w-11 rounded-full border border-slate-200 object-cover">
+                <div>
+                  <h3 class="flex items-center gap-1.5 text-sm font-bold text-slate-900">Nitin Rao <i data-lucide="badge-check" class="h-4 w-4 text-emerald-600"></i></h3>
+                  <p class="text-[11px] text-slate-500">VP of Engineering, Global SaaS Unicorn</p>
+                  <p class="text-[10px] font-bold text-blue-700">Kalyani Nagar, Pune • Commercial Property Advisory &amp; Term Shield</p>
+                </div>
+              </div>
+            </article>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- Institutional Syndication Badges -->
+      <section class="page-container">
+        <div class="space-y-6 rounded-3xl border border-slate-200 bg-slate-100/70 p-8 text-center">
+          <p class="text-xs font-bold uppercase tracking-widest text-slate-500">Direct Syndication &amp; Distribution Across 30+ Leading Indian Institutions</p>
+          <div class="flex flex-wrap items-center justify-center gap-3 sm:gap-6">
+            <span class="rounded-xl border border-slate-200 bg-white px-4 py-2.5 text-xs font-bold text-slate-700 shadow-sm transition hover:border-emerald-300 hover:text-emerald-700 sm:text-sm">State Bank of India</span>
+            <span class="rounded-xl border border-slate-200 bg-white px-4 py-2.5 text-xs font-bold text-slate-700 shadow-sm transition hover:border-emerald-300 hover:text-emerald-700 sm:text-sm">HDFC Bank</span>
+            <span class="rounded-xl border border-slate-200 bg-white px-4 py-2.5 text-xs font-bold text-slate-700 shadow-sm transition hover:border-emerald-300 hover:text-emerald-700 sm:text-sm">ICICI Bank</span>
+            <span class="rounded-xl border border-slate-200 bg-white px-4 py-2.5 text-xs font-bold text-slate-700 shadow-sm transition hover:border-emerald-300 hover:text-emerald-700 sm:text-sm">Axis Bank</span>
+            <span class="rounded-xl border border-slate-200 bg-white px-4 py-2.5 text-xs font-bold text-slate-700 shadow-sm transition hover:border-emerald-300 hover:text-emerald-700 sm:text-sm">Kotak Mahindra</span>
+            <span class="rounded-xl border border-slate-200 bg-white px-4 py-2.5 text-xs font-bold text-slate-700 shadow-sm transition hover:border-emerald-300 hover:text-emerald-700 sm:text-sm">Nippon India AMC</span>
+            <span class="rounded-xl border border-slate-200 bg-white px-4 py-2.5 text-xs font-bold text-slate-700 shadow-sm transition hover:border-emerald-300 hover:text-emerald-700 sm:text-sm">Tata Mutual Fund</span>
+            <span class="rounded-xl border border-slate-200 bg-white px-4 py-2.5 text-xs font-bold text-slate-700 shadow-sm transition hover:border-emerald-300 hover:text-emerald-700 sm:text-sm">Max Life</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Bottom Call To Action Banner -->
+      <section class="page-container">
+        <div class="relative overflow-hidden rounded-3xl border border-emerald-500/30 bg-gradient-to-r from-emerald-600 via-teal-600 to-blue-700 p-8 text-white shadow-xl sm:p-12">
+          <div class="pointer-events-none absolute right-0 top-0 h-96 w-96 rounded-full bg-white/10 blur-3xl"></div>
+          <div class="relative z-10 flex flex-col items-center justify-between gap-8 lg:flex-row">
+            <div class="space-y-3 text-center lg:text-left">
+              <span class="rounded-full border border-white/20 bg-white/15 px-3 py-1 text-xs font-bold uppercase tracking-wider text-amber-200">Zero Upfront Cost • In-Person or Virtual</span>
+              <h2 class="text-3xl font-black text-white sm:text-4xl">Take Control of Your Financial Future Today.</h2>
+              <p class="max-w-xl text-sm text-emerald-50 sm:text-base">Get a comprehensive review of your home loan rate, mutual fund portfolio health, and family insurance protection.</p>
+            </div>
+            <div class="flex shrink-0 flex-col items-center gap-4 sm:flex-row">
+              <button type="button" data-action="checkup" class="flex items-center justify-center gap-2 rounded-xl bg-white px-8 py-4 text-base font-bold text-slate-900 shadow-lg transition hover:scale-105">
+                <i data-lucide="sparkles" class="h-5 w-5 text-amber-500"></i> Book Free Financial Checkup
+              </button>
+              <a href="./contact.html" class="rounded-xl border border-white/30 bg-white/10 px-6 py-4 text-base font-bold text-white transition hover:bg-white/20">
+                Contact Pune Desk
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </section>
+
+  </main>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="relative overflow-hidden border-t border-amber-400/40 bg-slate-100 pt-16 pb-12 text-slate-700">
+    <div class="pointer-events-none absolute left-1/2 top-0 h-32 w-3/4 -translate-x-1/2 bg-gradient-to-r from-amber-500/10 to-emerald-500/10 blur-3xl"></div>
+    <div class="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 gap-10 border-b border-amber-400/40 pb-12 md:grid-cols-2 lg:grid-cols-6">
+        
+        <div class="space-y-4 lg:col-span-2">
+          <div class="flex items-center gap-3">
+            <img src="./src/assets/images/logo.jpeg" alt="Avighna Financial Services logo" class="h-14 w-14 rounded-xl border border-amber-400/40 bg-white object-contain p-0.5 shadow-sm shadow-amber-500/20 sm:h-16 sm:w-16">
+            <span>
+              <b class="text-2xl font-black tracking-tight text-slate-900">AVIGHNA<span class="ml-1 text-xl text-amber-500">.</span></b>
+              <small class="block text-[11px] font-semibold uppercase tracking-wider text-slate-500">Financial Services • Pune</small>
+            </span>
+          </div>
+          <p class="pr-4 text-sm leading-relaxed text-slate-600">Transparent wealth advisory across Home &amp; Business Loans, Mutual Funds, Disciplined SIPs, Risk Protection, and Prime Real Estate, operating in alignment with India's DPDP Act 2023 standards.</p>
+          <div class="flex flex-wrap gap-2">
+            <span class="inline-flex items-center gap-1.5 rounded-full border border-emerald-200 bg-emerald-50 px-3 py-1 text-xs font-semibold text-emerald-800">
+              <i data-lucide="shield-check" class="h-3.5 w-3.5 text-emerald-600"></i> ✓ DPDP Act 2023 Aligned
+            </span>
+            <span class="inline-flex items-center gap-1.5 rounded-full border border-blue-200 bg-blue-50 px-3 py-1 text-xs font-semibold text-blue-800">
+              <i data-lucide="lock-keyhole" class="h-3.5 w-3.5 text-blue-600"></i> ✓ Transparent Fiduciary Advisory
+            </span>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="mb-3 text-sm font-bold uppercase tracking-wider text-slate-900">Navigation</h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="./index.html" class="block w-full text-left font-medium leading-relaxed transition hover:text-emerald-600">Home Overview</a></li>
+            <li><a href="./services.html" class="block w-full text-left font-medium leading-relaxed transition hover:text-emerald-600">All Advisory Verticals</a></li>
+            <li><a href="./calculators.html" class="block w-full text-left font-medium leading-relaxed transition hover:text-emerald-600">Interactive Calculators</a></li>
+            <li><a href="./why-us.html" class="block w-full text-left font-medium leading-relaxed transition hover:text-emerald-600">Why Us &amp; Ecosystem</a></li>
+            <li><a href="./contact.html" class="block w-full text-left font-medium leading-relaxed transition hover:text-emerald-600">Contact &amp; Advisory Desk</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="mb-3 text-sm font-bold uppercase tracking-wider text-slate-900">Core Offerings</h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="./services.html" class="font-medium transition hover:text-emerald-600">Home Loans (from 8.35%)</a></li>
+            <li><a href="./services.html" class="font-medium transition hover:text-emerald-600">Business &amp; MSME Capital</a></li>
+            <li><a href="./services.html" class="font-medium transition hover:text-emerald-600">Direct Mutual Funds &amp; SIPs</a></li>
+            <li><a href="./services.html" class="font-medium transition hover:text-emerald-600">Term Life &amp; Health Cover</a></li>
+            <li><a href="./services.html" class="font-medium transition hover:text-emerald-600">Pune Property Advisory</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="mb-3 text-sm font-bold uppercase tracking-wider text-slate-900">Advisory Desk</h4>
+          <div class="space-y-2.5 text-xs text-slate-600">
+            <p class="flex items-start gap-2">
+              <i data-lucide="shield-check" class="mt-0.5 h-4 w-4 shrink-0 text-emerald-600"></i>
+              <span>Transparent fiduciary advisory aligned with India's DPDP Act 2023 standards.</span>
+            </p>
+            <p class="flex items-center gap-2">
+              <i data-lucide="phone" class="h-4 w-4 text-emerald-600"></i>
+              <a class="font-semibold hover:text-slate-900" href="tel:+919168613273">+91 91686 13273</a>
+            </p>
+            <p class="flex items-center gap-2">
+              <i data-lucide="mail" class="h-4 w-4 text-emerald-600"></i>
+              <a class="font-semibold hover:text-slate-900" href="mailto:indrapal@avighnatechgrow.in">indrapal@avighnatechgrow.in</a>
+            </p>
+            <p class="flex items-center gap-2">
+              <i data-lucide="clock-3" class="h-4 w-4 text-amber-600"></i> Mon – Sat: 9:30 AM – 7:00 PM IST
+            </p>
+            <button type="button" data-action="checkup" class="mt-2 flex w-full items-center justify-center gap-1.5 rounded-xl border border-emerald-300 bg-white px-3 py-2 text-xs font-bold text-emerald-700 shadow-sm transition hover:bg-emerald-50">
+              Schedule Pune Consultation <i data-lucide="arrow-up-right" class="h-3.5 w-3.5"></i>
+            </button>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="mb-3 text-sm font-bold uppercase tracking-wider text-slate-900">Legal &amp; Compliance</h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="./terms-and-conditions.html" class="font-medium transition hover:text-emerald-600">Terms &amp; Conditions</a></li>
+            <li><a href="./privacy-policy.html" class="font-medium transition hover:text-emerald-600">Privacy Policy</a></li>
+            <li><a href="./cookie-policy.html" class="font-medium transition hover:text-emerald-600">Cookie Policy</a></li>
+            <li><a href="./grievance-redressal.html" class="font-medium transition hover:text-emerald-600">Grievance Redressal</a></li>
+            <li><a href="./disclaimer.html" class="font-medium transition hover:text-emerald-600">Disclaimer</a></li>
+            <li class="pt-2"><button type="button" data-cookie-preferences class="text-left font-bold text-emerald-700 transition hover:text-emerald-900">Manage Cookie Preferences</button></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="space-y-2 border-b border-slate-200 py-8 text-[11px] leading-relaxed text-slate-500">
+        <p class="font-bold text-slate-700">Regulatory Disclosure &amp; Disclaimer:</p>
+        <p>Avighna Financial Services provides transparent wealth advisory in alignment with India's DPDP Act 2023 standards and acts as a distributor and referral advisor for financial products. <strong class="text-slate-700">Mutual Fund investments are subject to market risks; read all scheme-related documents carefully before investing.</strong></p>
+        <p>Loan sanctions, disbursals, and applicable interest rates are at the sole discretion of the respective financing institutions and depend on borrower eligibility, CIBIL credit parameters, and institutional lending policies. Insurance is the subject matter of solicitation; policies are underwritten by IRDAI-registered insurers.</p>
+      </div>
+
+      <div class="flex flex-col items-center justify-between gap-3 pt-6 text-xs text-slate-500 sm:flex-row">
+        <p>© 2026 Avighna Financial Services. All rights reserved.</p>
+        <p>Financial product terms remain subject to the relevant provider’s documents and approvals.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==================== CHECKUP MODAL ==================== -->
+  <div id="checkup-modal" class="modal-backdrop fixed inset-0 z-50 hidden items-center justify-center bg-slate-900/40 p-4 backdrop-blur-sm" role="dialog" aria-modal="true" aria-labelledby="checkup-title">
+    <div class="flex max-h-[90vh] w-full max-w-2xl flex-col overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-2xl">
+      <div class="flex items-center justify-between border-b border-slate-200 bg-slate-50 px-5 py-4 sm:px-6">
+        <div class="flex items-center gap-2.5">
+          <span class="flex h-9 w-9 items-center justify-center rounded-xl border border-emerald-200 bg-emerald-100 text-emerald-600">
+            <i data-lucide="sparkles" class="h-5 w-5"></i>
+          </span>
+          <div>
+            <h2 id="checkup-title" class="flex flex-wrap items-center gap-2 text-base font-bold text-slate-900 sm:text-lg">
+              Free Financial Checkup <span class="rounded-full border border-emerald-200 bg-emerald-100 px-2 py-0.5 text-[11px] font-bold text-emerald-800">100% Complimentary</span>
+            </h2>
+            <p class="text-xs text-slate-500">Personalized Audit by Pune Senior Advisors</p>
+          </div>
+        </div>
+        <button type="button" data-close-modal="checkup-modal" class="rounded-lg p-1.5 text-slate-400 transition hover:bg-slate-200/60 hover:text-slate-700" aria-label="Close modal">
+          <i data-lucide="x" class="h-5 w-5"></i>
+        </button>
+      </div>
+
+      <div id="checkup-progress" class="bg-white px-6 pb-2 pt-4">
+        <div class="mb-2 flex justify-between text-[10px] font-semibold text-slate-500 sm:text-xs">
+          <span data-step-label="1" class="font-bold text-emerald-700">1. Financial Goal</span>
+          <span data-step-label="2">2. Scope &amp; Budget</span>
+          <span data-step-label="3">3. Pune Scheduling</span>
+        </div>
+        <div class="h-2 w-full overflow-hidden rounded-full bg-slate-100">
+          <div id="checkup-progress-bar" class="h-full rounded-full bg-gradient-to-r from-emerald-500 to-teal-500 transition-all duration-300" style="width:33.33%"></div>
+        </div>
+      </div>
+
+      <div class="flex-1 overflow-y-auto bg-white p-5 sm:p-6">
+        
+        <!-- Step 1: Goal Selection -->
+        <div id="checkup-step-1" class="space-y-4">
+          <div>
+            <h3 class="mb-1 text-lg font-bold text-slate-900">What is your primary financial objective?</h3>
+            <p class="text-sm text-slate-500">Select the area where you want our certified team to conduct a deep-dive audit.</p>
+          </div>
+          <div id="goal-options" class="grid grid-cols-1 gap-3 pt-2 sm:grid-cols-2">
+            
+            <button type="button" data-goal-option="Home Loan" class="goal-option flex items-start gap-3 rounded-2xl border border-emerald-500 bg-emerald-50/60 p-3.5 text-left shadow-md ring-1 ring-emerald-500/50 transition-all duration-200">
+              <span class="goal-icon flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-emerald-600 text-white"><i data-lucide="house" class="h-5 w-5"></i></span>
+              <span>
+                <b class="goal-label flex items-center gap-1.5 text-sm text-slate-900">Home Loan &amp; Transfer <i data-lucide="circle-check" class="goal-check h-4 w-4 shrink-0 text-emerald-600"></i></b>
+                <small class="mt-0.5 block text-xs text-slate-500">Lowest interest rates from 8.35%</small>
+              </span>
+            </button>
+
+            <button type="button" data-goal-option="Wealth Creation" class="goal-option flex items-start gap-3 rounded-2xl border border-slate-200 bg-white p-3.5 text-left shadow-sm transition hover:border-slate-300 hover:bg-slate-50">
+              <span class="goal-icon flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-slate-100 text-slate-700"><i data-lucide="trending-up" class="h-5 w-5"></i></span>
+              <span>
+                <b class="goal-label flex items-center gap-1.5 text-sm text-slate-900">Wealth Creation &amp; SIP <i data-lucide="circle-check" class="goal-check h-4 w-4 shrink-0 text-emerald-600" hidden></i></b>
+                <small class="mt-0.5 block text-xs text-slate-500">Disciplined long-term compounding</small>
+              </span>
+            </button>
+
+            <button type="button" data-goal-option="Business Loan" class="goal-option flex items-start gap-3 rounded-2xl border border-slate-200 bg-white p-3.5 text-left shadow-sm transition hover:border-slate-300 hover:bg-slate-50">
+              <span class="goal-icon flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-slate-100 text-slate-700"><i data-lucide="building-2" class="h-5 w-5"></i></span>
+              <span>
+                <b class="goal-label flex items-center gap-1.5 text-sm text-slate-900">Business &amp; MSME Capital <i data-lucide="circle-check" class="goal-check h-4 w-4 shrink-0 text-emerald-600" hidden></i></b>
+                <small class="mt-0.5 block text-xs text-slate-500">Working capital &amp; machinery loans</small>
+              </span>
+            </button>
+
+            <button type="button" data-goal-option="Retirement Planning" class="goal-option flex items-start gap-3 rounded-2xl border border-slate-200 bg-white p-3.5 text-left shadow-sm transition hover:border-slate-300 hover:bg-slate-50">
+              <span class="goal-icon flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-slate-100 text-slate-700"><i data-lucide="piggy-bank" class="h-5 w-5"></i></span>
+              <span>
+                <b class="goal-label flex items-center gap-1.5 text-sm text-slate-900">Retirement &amp; FIRE <i data-lucide="circle-check" class="goal-check h-4 w-4 shrink-0 text-emerald-600" hidden></i></b>
+                <small class="mt-0.5 block text-xs text-slate-500">Inflation-adjusted corpus roadmaps</small>
+              </span>
+            </button>
+
+            <button type="button" data-goal-option="Term Insurance" class="goal-option flex items-start gap-3 rounded-2xl border border-slate-200 bg-white p-3.5 text-left shadow-sm transition hover:border-slate-300 hover:bg-slate-50">
+              <span class="goal-icon flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-slate-100 text-slate-700"><i data-lucide="shield-check" class="h-5 w-5"></i></span>
+              <span>
+                <b class="goal-label flex items-center gap-1.5 text-sm text-slate-900">Term Life &amp; Health Cover <i data-lucide="circle-check" class="goal-check h-4 w-4 shrink-0 text-emerald-600" hidden></i></b>
+                <small class="mt-0.5 block text-xs text-slate-500">High-value claim settlement protection</small>
+              </span>
+            </button>
+
+            <button type="button" data-goal-option="Property Advisory" class="goal-option flex items-start gap-3 rounded-2xl border border-slate-200 bg-white p-3.5 text-left shadow-sm transition hover:border-slate-300 hover:bg-slate-50">
+              <span class="goal-icon flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-slate-100 text-slate-700"><i data-lucide="calculator" class="h-5 w-5"></i></span>
+              <span>
+                <b class="goal-label flex items-center gap-1.5 text-sm text-slate-900">Property &amp; Commercial <i data-lucide="circle-check" class="goal-check h-4 w-4 shrink-0 text-emerald-600" hidden></i></b>
+                <small class="mt-0.5 block text-xs text-slate-500">Vetted Pune acquisitions &amp; yields</small>
+              </span>
+            </button>
+
+          </div>
+          <div class="flex justify-end pt-4">
+            <button type="button" data-checkup-next="2" class="flex items-center gap-2 rounded-xl bg-emerald-600 px-6 py-2.5 text-sm font-bold text-white shadow-md shadow-emerald-600/25 transition hover:scale-[1.01] hover:bg-emerald-700">
+              Continue to Scope <i data-lucide="arrow-right" class="h-4 w-4"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Step 2: Scope & Budget -->
+        <div id="checkup-step-2" hidden class="space-y-5">
+          <div>
+            <h3 class="mb-1 text-lg font-bold text-slate-900">Scope &amp; Investment Parameters</h3>
+            <p class="text-sm text-slate-500">Help us match you with the right bank tier or fund distribution bracket.</p>
+          </div>
+          <div>
+            <p class="mb-2 text-xs font-bold uppercase tracking-wider text-slate-600">Monthly Household Income / Net Revenue</p>
+            <div id="income-options" class="grid grid-cols-1 gap-2.5 sm:grid-cols-2">
+              <button type="button" data-select-group="income" data-select-value="₹50,000 - ₹1,00,000 / month" class="selection-option rounded-xl border border-slate-200 bg-white px-3 py-2.5 text-left text-xs font-semibold text-slate-700 transition hover:bg-slate-50">₹50,000 - ₹1,00,000 / month</button>
+              <button type="button" data-select-group="income" data-select-value="₹1,00,000 - ₹2,50,000 / month" class="selection-option rounded-xl border border-emerald-500 bg-emerald-50 px-3 py-2.5 text-left text-xs font-bold text-emerald-900 transition">₹1,00,000 - ₹2,50,000 / month</button>
+              <button type="button" data-select-group="income" data-select-value="₹2,50,000 - ₹5,00,000 / month" class="selection-option rounded-xl border border-slate-200 bg-white px-3 py-2.5 text-left text-xs font-semibold text-slate-700 transition hover:bg-slate-50">₹2,50,000 - ₹5,00,000 / month</button>
+              <button type="button" data-select-group="income" data-select-value="₹5,00,000+ / month" class="selection-option rounded-xl border border-slate-200 bg-white px-3 py-2.5 text-left text-xs font-semibold text-slate-700 transition hover:bg-slate-50">₹5,00,000+ / month</button>
+            </div>
+          </div>
+          <div>
+            <p class="mb-2 text-xs font-bold uppercase tracking-wider text-slate-600">Target Size (Estimated Loan Amount or Investment Corpus)</p>
+            <div id="ticket-options" class="grid grid-cols-2 gap-2 sm:grid-cols-4">
+              <button type="button" data-select-group="ticket" data-select-value="₹10 Lakh - ₹25 Lakh" class="selection-option rounded-xl border border-slate-200 bg-white p-2.5 text-center text-xs font-medium text-slate-700 transition hover:bg-slate-50">₹10 Lakh - ₹25 Lakh</button>
+              <button type="button" data-select-group="ticket" data-select-value="₹25 Lakh - ₹50 Lakh" class="selection-option rounded-xl border border-blue-500 bg-blue-50 p-2.5 text-center text-xs font-bold text-blue-900 transition">₹25 Lakh - ₹50 Lakh</button>
+              <button type="button" data-select-group="ticket" data-select-value="₹50 Lakh - ₹1 Crore" class="selection-option rounded-xl border border-slate-200 bg-white p-2.5 text-center text-xs font-medium text-slate-700 transition hover:bg-slate-50">₹50 Lakh - ₹1 Crore</button>
+              <button type="button" data-select-group="ticket" data-select-value="₹1 Crore - ₹5 Crore+" class="selection-option rounded-xl border border-slate-200 bg-white p-2.5 text-center text-xs font-medium text-slate-700 transition hover:bg-slate-50">₹1 Crore - ₹5 Crore+</button>
+            </div>
+          </div>
+          <div>
+            <p class="mb-2 text-xs font-bold uppercase tracking-wider text-slate-600">Execution Horizon</p>
+            <div class="flex flex-wrap gap-2">
+              <button type="button" data-select-group="timeline" data-select-value="Immediate (Within 1-2 weeks)" class="selection-option rounded-full bg-blue-600 px-3 py-1.5 text-xs font-bold text-white shadow-sm transition">Immediate (Within 1-2 weeks)</button>
+              <button type="button" data-select-group="timeline" data-select-value="Within 1 to 3 months" class="selection-option rounded-full border border-slate-200 bg-slate-100 px-3 py-1.5 text-xs font-medium text-slate-700 transition hover:bg-slate-200">Within 1 to 3 months</button>
+              <button type="button" data-select-group="timeline" data-select-value="Planning for next FY" class="selection-option rounded-full border border-slate-200 bg-slate-100 px-3 py-1.5 text-xs font-medium text-slate-700 transition hover:bg-slate-200">Planning for next FY</button>
+            </div>
+          </div>
+          <div class="flex items-center justify-between border-t border-slate-200 pt-4">
+            <button type="button" data-checkup-next="1" class="flex items-center gap-1.5 px-4 py-2 text-sm font-semibold text-slate-600 hover:text-slate-900"><i data-lucide="arrow-left" class="h-4 w-4"></i> Back</button>
+            <button type="button" data-checkup-next="3" class="flex items-center gap-2 rounded-xl bg-emerald-600 px-6 py-2.5 text-sm font-bold text-white shadow-md transition hover:bg-emerald-700">Next: Contact Details <i data-lucide="arrow-right" class="h-4 w-4"></i></button>
+          </div>
+        </div>
+
+        <!-- Step 3: Contact Form -->
+        <form id="checkup-step-3" hidden class="space-y-4" novalidate>
+          <div>
+            <h3 class="mb-1 text-lg font-bold text-slate-900">Where should we deliver your Audit Blueprint?</h3>
+            <p class="text-sm text-slate-500">Our senior advisor will prepare a comparative roadmap before calling.</p>
+          </div>
+          <div class="grid grid-cols-1 gap-3 sm:grid-cols-2">
+            <div>
+              <label for="checkup-name" class="mb-1 block text-xs font-bold text-slate-700">Full Name *</label>
+              <input id="checkup-name" name="name" required placeholder="e.g. Rahul Sharma" class="w-full rounded-xl border border-slate-300 px-3 py-2.5 text-sm focus:border-emerald-500 focus:outline-none focus:ring-2 focus:ring-emerald-500">
+              <p data-error-for="name" class="mt-1 text-xs text-rose-600"></p>
+            </div>
+            <div>
+              <label for="checkup-phone" class="mb-1 block text-xs font-bold text-slate-700">Mobile Number (WhatsApp) *</label>
+              <input id="checkup-phone" name="phone" type="tel" required placeholder="e.g. 98230 XXXXX" class="w-full rounded-xl border border-slate-300 px-3 py-2.5 text-sm focus:border-emerald-500 focus:outline-none focus:ring-2 focus:ring-emerald-500">
+              <p data-error-for="phone" class="mt-1 text-xs text-rose-600"></p>
+            </div>
+          </div>
+          <div class="grid grid-cols-1 gap-3 sm:grid-cols-2">
+            <div>
+              <label for="checkup-email" class="mb-1 block text-xs font-bold text-slate-700">Email Address</label>
+              <input id="checkup-email" name="email" type="email" placeholder="rahul@company.com" class="w-full rounded-xl border border-slate-300 px-3 py-2.5 text-sm focus:border-emerald-500 focus:outline-none focus:ring-2 focus:ring-emerald-500">
+              <p data-error-for="email" class="mt-1 text-xs text-rose-600"></p>
+            </div>
+            <div>
+              <label for="checkup-location" class="mb-1 block text-xs font-bold text-slate-700">Preferred Location / Area</label>
+              <select id="checkup-location" name="location" class="w-full rounded-xl border border-slate-300 bg-white px-3 py-2.5 text-sm focus:border-emerald-500 focus:outline-none focus:ring-2 focus:ring-emerald-500">
+                <option>Baner / Balewadi, Pune</option>
+                <option>Hinjewadi / Wakad, Pune</option>
+                <option>Kothrud / Karve Road, Pune</option>
+                <option>Kalyani Nagar / Viman Nagar, Pune</option>
+                <option>Aundh / S.B. Road, Pune</option>
+                <option>Pimpri-Chinchwad / MIDC</option>
+                <option>Virtual Consultation (Google Meet / Zoom)</option>
+              </select>
+            </div>
+          </div>
+          <div>
+            <label for="checkup-notes" class="mb-1 block text-xs font-bold text-slate-700">Specific Query or Existing Loan Bank (Optional)</label>
+            <textarea id="checkup-notes" name="notes" rows="2" placeholder="Tell us a little more about what you need..." class="w-full rounded-xl border border-slate-300 p-2.5 text-xs focus:border-emerald-500 focus:outline-none focus:ring-2 focus:ring-emerald-500"></textarea>
+          </div>
+          <div class="flex items-center gap-2.5 rounded-xl border border-slate-200 bg-slate-50 p-3.5 text-xs text-slate-600">
+            <i data-lucide="shield-check" class="h-5 w-5 shrink-0 text-emerald-600"></i> We maintain strict NDAs. Your information is never shared with third-party telemarketers.
+          </div>
+          <div class="flex items-center justify-between border-t border-slate-200 pt-3">
+            <button type="button" data-checkup-next="2" class="flex items-center gap-1.5 px-4 py-2 text-sm font-semibold text-slate-600 hover:text-slate-900"><i data-lucide="arrow-left" class="h-4 w-4"></i> Back</button>
+            <button type="submit" class="flex items-center gap-2 rounded-xl bg-gradient-to-r from-emerald-600 to-teal-600 px-7 py-3 text-sm font-bold text-white shadow-md shadow-emerald-600/30 transition hover:scale-[1.01]">
+              Book Free Consultation <i data-lucide="sparkles" class="h-4 w-4 text-amber-300"></i>
+            </button>
+          </div>
+        </form>
+
+        <!-- Step 4: Confirmation Screen -->
+        <div id="checkup-step-4" hidden class="space-y-4 py-6 text-center">
+          <span class="mx-auto flex h-16 w-16 animate-bounce-short items-center justify-center rounded-full border border-emerald-200 bg-emerald-100 text-emerald-600">
+            <i data-lucide="circle-check" class="h-10 w-10"></i>
+          </span>
+          <div>
+            <span class="rounded-full border border-emerald-200 bg-emerald-100 px-3 py-1 text-xs font-bold uppercase tracking-wider text-emerald-800">Request Confirmed • Desk Assigned</span>
+            <h3 class="mt-3 text-2xl font-black text-slate-900">Thank You, <span id="checkup-thanks-name">Valued Client</span>!</h3>
+            <p class="mx-auto mt-2 max-w-md text-sm text-slate-600">Your Free Financial Audit dossier has been queued for our Senior Pune Advisory team.</p>
+          </div>
+          <div class="mx-auto max-w-md space-y-2 rounded-2xl border border-slate-200 bg-slate-50 p-4 text-left text-xs">
+            <p class="flex justify-between border-b border-slate-200 pb-2"><span class="text-slate-500">Consultation Reference:</span><b id="checkup-reference" class="font-mono text-sm text-emerald-700"></b></p>
+            <p class="flex justify-between"><span class="text-slate-500">Selected Focus:</span><b id="checkup-confirm-goal" class="text-slate-900"></b></p>
+            <p class="flex justify-between"><span class="text-slate-500">Assigned Branch:</span><b class="text-emerald-700">Baner HQ, Pune</b></p>
+            <p class="flex justify-between"><span class="text-slate-500">Expected Advisor Call:</span><b class="text-slate-900">Within 2 Business Hours</b></p>
+          </div>
+          <button type="button" data-close-modal="checkup-modal" class="mt-4 rounded-xl bg-emerald-600 px-6 py-2.5 text-sm font-bold text-white shadow-md transition hover:bg-emerald-700">
+            Return to Website
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== CLIENT PORTAL MODAL ==================== -->
+  <div id="portal-modal" class="modal-backdrop fixed inset-0 z-50 hidden items-center justify-center bg-slate-900/40 p-4 backdrop-blur-sm" role="dialog" aria-modal="true" aria-labelledby="portal-title">
+    <div class="flex max-h-[92vh] w-full max-w-3xl flex-col overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-2xl">
+      <div class="flex items-center justify-between border-b border-slate-200 bg-slate-50 px-6 py-4">
+        <div class="flex items-center gap-3">
+          <span class="flex h-10 w-10 items-center justify-center rounded-xl border border-blue-200 bg-blue-100 text-blue-600">
+            <i data-lucide="lock-keyhole" class="h-5 w-5"></i>
+          </span>
+          <div>
+            <h2 id="portal-title" class="flex flex-wrap items-center gap-2 text-base font-bold text-slate-900 sm:text-lg">
+              Avighna Client Wealth Portal <span class="rounded-full border border-blue-200 bg-blue-100 px-2 py-0.5 text-[10px] font-bold text-blue-800">256-Bit Encrypted</span>
+            </h2>
+            <p class="text-xs text-slate-500">Consolidated Mutual Funds, Loans &amp; Insurance Tracking</p>
+          </div>
+        </div>
+        <button type="button" data-close-modal="portal-modal" class="rounded-lg p-1.5 text-slate-400 transition hover:bg-slate-200/60 hover:text-slate-700" aria-label="Close portal">
+          <i data-lucide="x" class="h-5 w-5"></i>
+        </button>
+      </div>
+
+      <div class="flex border-b border-slate-200 bg-slate-100/60 px-6 pt-2">
+        <button type="button" data-portal-tab="demo" aria-selected="true" class="portal-tab rounded-t-lg border-x border-t border-b-transparent border-emerald-600 bg-white px-4 pb-2.5 text-xs font-bold text-emerald-800 shadow-sm sm:text-sm">Interactive Portal Preview</button>
+        <button type="button" data-portal-tab="login" aria-selected="false" class="portal-tab border-b-2 border-transparent px-4 pb-2.5 text-xs font-bold text-slate-500 transition hover:text-slate-800 sm:text-sm">Client Login (OTP)</button>
+      </div>
+
+      <div class="flex-1 overflow-y-auto bg-white p-5 sm:p-6">
+        
+        <!-- Portal Demo View -->
+        <div id="portal-demo" class="space-y-6">
+          <div class="flex flex-col justify-between gap-3 rounded-2xl border border-blue-100 bg-gradient-to-r from-blue-50 to-emerald-50 p-4 shadow-sm sm:flex-row sm:items-center">
+            <div>
+              <div class="flex flex-wrap items-center gap-2">
+                <span class="text-xs font-bold uppercase tracking-wider text-blue-700">Verified High Networth Client</span>
+                <i class="h-1.5 w-1.5 rounded-full bg-blue-600"></i>
+                <span class="text-xs text-slate-500">ID: AV-8921-PN</span>
+              </div>
+              <h3 class="mt-1 text-lg font-bold text-slate-900">Vikram Deshmukh (Family Folio)</h3>
+              <p class="text-xs text-slate-600">Advisor Assigned: Shrikant Kulkarni, CFP (Baner Desk)</p>
+            </div>
+            <button type="button" data-action="tax-cert" class="flex items-center gap-1.5 self-start rounded-xl border border-slate-300 bg-white px-3.5 py-1.5 text-xs font-bold text-slate-700 shadow-sm transition hover:bg-slate-50">
+              <i data-lucide="download" class="h-3.5 w-3.5"></i> Tax Certificates
+            </button>
+          </div>
+
+          <div class="grid grid-cols-1 gap-3.5 sm:grid-cols-3">
+            <article class="rounded-2xl border border-slate-200 bg-white p-4 shadow-sm">
+              <p class="flex items-center justify-between text-xs font-semibold text-slate-500">Mutual Funds &amp; SIP Corpus <i data-lucide="trending-up" class="h-4 w-4 text-emerald-600"></i></p>
+              <b class="mt-2 block text-xl text-slate-900">₹78,42,910</b>
+              <p class="mt-1 text-xs font-bold text-emerald-700">+14.8% XIRR <span class="font-normal text-slate-500">| SIP: ₹85,000</span></p>
+            </article>
+            <article class="rounded-2xl border border-slate-200 bg-white p-4 shadow-sm">
+              <p class="flex items-center justify-between text-xs font-semibold text-slate-500">Active Home Loan (SBI) <i data-lucide="house" class="h-4 w-4 text-blue-600"></i></p>
+              <b class="mt-2 block text-xl text-slate-900">₹1,18,50,000</b>
+              <p class="mt-1 text-xs font-bold text-blue-700">8.35% ROI <span class="font-normal text-slate-500">| EMI: ₹99,480</span></p>
+            </article>
+            <article class="rounded-2xl border border-slate-200 bg-white p-4 shadow-sm">
+              <p class="flex items-center justify-between text-xs font-semibold text-slate-500">Total Insurance Shield <i data-lucide="heart-pulse" class="h-4 w-4 text-rose-500"></i></p>
+              <b class="mt-2 block text-xl text-slate-900">₹3.50 Crore</b>
+              <p class="mt-1 text-xs font-bold text-emerald-700">100% Active <span class="font-normal text-slate-500">| Renewal: Dec 2026</span></p>
+            </article>
+          </div>
+
+          <div class="space-y-3 rounded-2xl border border-slate-200 bg-slate-50 p-5">
+            <div class="flex flex-wrap items-center justify-between gap-2">
+              <h3 class="flex items-center gap-2 text-sm font-bold text-slate-900"><i data-lucide="chart-pie" class="h-4 w-4 text-emerald-600"></i> Goal-Based Portfolio Distribution</h3>
+              <span class="rounded-full bg-emerald-100 px-2 py-0.5 text-xs font-bold text-emerald-800">Target: Balanced Growth</span>
+            </div>
+            <div>
+              <div class="mb-1 flex justify-between gap-2 text-xs text-slate-600">
+                <span>Large &amp; Flexi-Cap Equity (Parag Parikh, Nippon, HDFC)</span><b class="text-slate-900">62% (₹48.6L)</b>
+              </div>
+              <div class="h-2 w-full overflow-hidden rounded-full bg-slate-200">
+                <div class="h-full rounded-full bg-emerald-600" style="width:62%"></div>
+              </div>
+            </div>
+            <div>
+              <div class="mb-1 flex justify-between gap-2 text-xs text-slate-600">
+                <span>Mid &amp; Small Cap Growth Engines (Quant, Tata)</span><b class="text-slate-900">23% (₹18.0L)</b>
+              </div>
+              <div class="h-2 w-full overflow-hidden rounded-full bg-slate-200">
+                <div class="h-full rounded-full bg-blue-600" style="width:23%"></div>
+              </div>
+            </div>
+            <div>
+              <div class="mb-1 flex justify-between gap-2 text-xs text-slate-600">
+                <span>Arbitrage, Liquid &amp; Sovereign Gold Bonds</span><b class="text-slate-900">15% (₹11.8L)</b>
+              </div>
+              <div class="h-2 w-full overflow-hidden rounded-full bg-slate-200">
+                <div class="h-full rounded-full bg-amber-500" style="width:15%"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex flex-col items-center justify-between gap-2 rounded-2xl border border-emerald-200 bg-emerald-50 p-4 text-xs sm:flex-row">
+            <span class="flex items-center gap-2 font-medium text-emerald-800">
+              <i data-lucide="shield-check" class="h-4 w-4 shrink-0 text-emerald-600"></i> Next Bi-Annual Portfolio Rebalancing Scheduled: Dec 15, 2026
+            </span>
+            <a href="tel:+919168613273" class="rounded-lg bg-emerald-600 px-3.5 py-1.5 font-bold text-white shadow-sm transition hover:bg-emerald-700">Call Advisor</a>
+          </div>
+        </div>
+
+        <!-- Portal Login View -->
+        <div id="portal-login" hidden class="mx-auto max-w-md space-y-5 py-8">
+          <div class="text-center">
+            <h3 class="text-xl font-bold text-slate-900">Sign In to Your Portfolio</h3>
+            <p class="mt-1 text-xs text-slate-500">Enter your registered 10-digit mobile number</p>
+          </div>
+          <form id="portal-phone-form" class="space-y-4">
+            <div>
+              <label for="portal-phone" class="mb-1 block text-xs font-bold text-slate-700">Registered Mobile Number</label>
+              <input id="portal-phone" type="tel" inputmode="numeric" minlength="10" required placeholder="e.g. 9823045890" class="w-full rounded-xl border border-slate-300 px-3 py-2.5 text-sm focus:border-emerald-500 focus:outline-none focus:ring-2 focus:ring-emerald-500">
+              <p id="portal-phone-error" class="mt-1 text-xs text-rose-600"></p>
+            </div>
+            <button type="submit" class="flex w-full items-center justify-center gap-2 rounded-xl bg-emerald-600 py-2.5 text-sm font-bold text-white shadow-md transition hover:bg-emerald-700">
+              Generate OTP <i data-lucide="arrow-right" class="h-4 w-4"></i>
+            </button>
+          </form>
+          <form id="portal-otp-form" hidden class="space-y-4">
+            <p class="rounded-xl border border-emerald-200 bg-emerald-50 p-3 text-xs text-emerald-800">
+              OTP sent to +91 <span id="portal-sent-phone"></span>. For demo access, enter <b>1234</b>.
+            </p>
+            <div>
+              <label for="portal-otp" class="mb-1 block text-xs font-bold text-slate-700">Enter 4-Digit OTP</label>
+              <input id="portal-otp" type="text" inputmode="numeric" maxlength="4" required placeholder="1234" class="w-full rounded-xl border border-slate-300 py-2 text-center font-mono text-lg font-bold tracking-widest focus:border-emerald-500 focus:outline-none focus:ring-2 focus:ring-emerald-500">
+              <p id="portal-otp-error" class="mt-1 text-xs text-rose-600"></p>
+            </div>
+            <button type="submit" class="w-full rounded-xl bg-emerald-600 py-2.5 text-sm font-bold text-white shadow-md transition hover:bg-emerald-700">
+              Verify &amp; Unlock Dashboard
+            </button>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification Container -->
+  <div id="toast" class="fixed bottom-6 right-6 z-[60] hidden max-w-[calc(100vw-3rem)] items-center gap-3 rounded-2xl border border-emerald-300 bg-white px-4 py-3 text-slate-800 shadow-xl" role="status" aria-live="polite">
+    <i data-lucide="circle-check" class="h-5 w-5 shrink-0 text-emerald-600"></i>
+    <span id="toast-message" class="text-xs font-semibold sm:text-sm"></span>
+    <button type="button" data-action="dismiss-toast" class="ml-2 rounded-lg p-1 text-slate-400 transition hover:text-slate-600" aria-label="Dismiss notification">
+      <i data-lucide="x" class="h-4 w-4"></i>
+    </button>
+  </div>
+
+</body>
+
 </html>
